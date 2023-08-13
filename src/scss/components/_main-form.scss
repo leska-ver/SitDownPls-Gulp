@@ -1,0 +1,573 @@
+@import "../mixins/_breakpoint.scss";
+
+/***Моя форма - main-form-1920px***/
+.main-form {
+  padding: 47px 0 70px;
+
+  &__container {
+    background: url("../img/form-img1920.png") 93.5% 25px no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    /*У h2 стоит bold*/
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  &__desrc {
+    position: relative;
+    margin-bottom: 15px;
+    width: 50%;
+    color: var(--color-doveGray);
+  }
+
+  /*---Тултип---*/
+  &__tooltip {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--color-crusta);
+    background-color: transparent;
+    -webkit-transition: background-color .4s ease-in-out;
+    -ms-transition: background-color .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--color-doveGray);
+    }
+
+    &:hover,
+    &:active {
+      border: 2px solid var(--color-crusta);
+      background-color: var(--color-crusta);
+    }
+  }
+
+  [role=tooltip],
+  .hidetooltip.hidetooltip.hidetooltip+[role=tooltip] {
+    visibility: hidden;
+  }
+
+  [aria-describedby]:hover,
+  [aria-describedby]:focus {
+    position: relative;
+  }
+
+  [aria-describedby]:hover+[role=tooltip],
+  [aria-describedby]:focus+[role=tooltip] {
+    visibility: visible;
+  }
+
+  &__span-text {
+    position: absolute;
+    top: -81px;
+    right: 0;
+    padding: 5px;
+    width: 238px;
+    background-color: var(--color-mineShaft);
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  /*Иконка*/
+  &__tooltip span {
+    display: block;
+    margin-left: -2px;
+    font-weight: 700;
+    font-size: 10px;
+    color: var(--color-crusta);
+    -webkit-transition: color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+  }
+
+  &__tooltip:focus span {
+    color: var(--color-doveGray);
+  }
+
+  &__tooltip:hover span,
+  &__tooltip:active span {
+    color: var(--color-white);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 48.5%;
+  }
+
+  &__label {
+    /*Для формы ошибки .js-validate-error-label*/
+    position: relative;
+  }
+
+  &__input {
+    margin-bottom: 28px;
+    padding: 6px 16px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--color-dustyGray);
+    background-color: var(--color-wildSand);
+    -webkit-transition: background-color .4s ease-in-out;
+    -ms-transition: background-color .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--color-mediumPurple);
+      background-color: var(--color-magnolia);
+    }
+
+    &:hover {
+      background-color: var(--color-gallery);
+    }
+
+    &:active {
+      border: 2px solid var(--color-sulu);
+      background-color: var(--color-wildSand);
+    }
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+    width: max-content;
+
+    &_filled:disabled {
+      color: #999;
+      border-color: #EAEAEA;
+      background-color: #EAEAEA;
+    }
+  }
+
+  &__checkbox-container,
+  &__checkbox {
+    position: relative;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__input-checkbox {
+    padding-left: 0;
+    /*Убрали синий чекбокс, он на мобильнике высвечивается*/
+    opacity: 0;
+  }
+
+  &__label-checkbox {
+    padding-left: 0;
+  }
+
+  &__input-checkbox:focus,
+  input[type="checkbox"]:focus~label::before,
+  .checkbox-js:checked+&__label-checkbox:focus::before {
+    border: 1px solid rgb(255, 105, 114);
+    background-color: var(--color-mauve);
+    outline: none;
+  }
+
+  /*Для Галпа*/
+  &__input-checkbox:focus-visible {
+    outline: none;
+  }
+
+  /* // Для Галпа*/
+
+  &__input-checkbox:hover,
+  input[type="checkbox"]:hover~label::before {
+    border: 1px solid var(--color-purpleHeart);
+    background-color: var(--color-purpleHeart);
+  }
+
+  &__label-checkbox {
+    margin-right: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -17px;
+      border: 1px solid var(--color-dustyGray);
+      border-radius: 2px;
+      width: 14px;
+      height: 14px;
+      background-color: var(--color-mediumPurple);
+      cursor: pointer;
+      -webkit-transition: border-color 0.05s linear, background-color 0.05s linear;
+      -ms-transition: border-color 0.05s linear, background-color 0.05s linear;
+      -moz-transition: border-color 0.05s linear, background-color 0.05s linear;
+      -o-transition: border-color 0.05s linear, background-color 0.05s linear;
+      transition: border-color 0.05s linear, background-color 0.05s linear;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -14px;
+      border-top: 2px solid var(--color-white);
+      border-right: 2px solid var(--color-white);
+      border-radius: 2px;
+      width: 9px;
+      height: 6px;
+      transform: rotate(123deg);
+      cursor: pointer;
+      -webkit-transition: background-image 0.05s linear;
+      -ms-transition: background-image 0.05s linear;
+      -moz-transition: background-image 0.05s linear;
+      -o-transition: background-image 0.05s linear;
+      transition: background-image 0.05s linear;
+      display: none;
+    }
+  }
+
+  .checkbox-js:checked+&__label-checkbox::before {
+    border-color: var(--color-mediumPurple);
+    background-color: var(--color-mediumPurple);
+  }
+
+  .checkbox-js:checked+&__label-checkbox::after {
+    display: block;
+  }
+
+  &__link {
+    color: var(--color-mediumPurple);
+    text-decoration: underline;
+    -webkit-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--color-mauve);
+      outline: none;
+    }
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-mauve);
+    }
+
+    &:active {
+      color: var(--color-white);
+      background-color: var(--color-purpleHeart);
+    }
+  }
+
+  /* //Иконка*/
+
+  /*Для размера модалки*/
+  &__block .simplebar-content {
+    /*Не удалять!*/
+    height: 336px;
+  }
+
+  /* // Для размера модалки*/
+
+  &__modal-h2 {
+    /*Общий*/
+    margin-top: 0;
+    margin-bottom: 7px;
+    /*У h2 стоит bold*/
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  /*modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 1920px*/
+  &__modal-wrap-pol {
+    max-width: 900px;
+  }
+
+  &__modal-container-pol {
+    padding: 29px 30px 24px;
+    height: 420px;
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  /* // modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 1920px*/
+  /*--- // Тултип---*/
+
+  /* main-form__modal 1920px*/
+  &__slonik {
+    position: fixed;
+    overflow: auto;
+    text-align: center;
+    width: 100%;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  &__elephant-png {
+    margin-bottom: 32px;
+    margin-left: -47px;
+    width: 172px;
+    height: 117px;
+    background-image: url("../img/elephant-orange.png");
+    /*Для codepen
+    background-image: url("https://hohrin.expert/wp-content/uploads/2022/04/3.png");*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+}
+
+/*** // Моя форма - main-form-1920px***/
+
+
+@include desktop {
+
+  /***Моя форма - main-form-1385px***/
+  .main-form {
+    padding: 35px 0 68px;
+
+    &__container {
+      background-size: 50.7%;
+      background-position-y: center;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__desrc {
+      width: 40%;
+    }
+
+    &__form {
+      width: 42.5%;
+    }
+
+    &__input {
+      margin-bottom: 27px;
+    }
+
+    &__btn {
+      /*В обычном
+      margin: 3px 0 12px -2px;*/
+      /*В Gulp-e*/
+      margin: 3px 0 14px -2px;
+      padding: 18px 35px;
+    }
+
+    &__label-checkbox {
+      margin-right: 0;
+      padding-left: 5px;
+    }
+
+    &__modal-container-pol .modal-close {
+      top: 0;
+    }
+  }
+
+  /*** // Моя форма - main-form-1385px***/
+}
+
+@include tablet {
+  .modal-wrap {
+    max-width: 81%;
+  }
+
+  /***Моя форма - main-form-999px***/
+  .main-form {
+    padding-top: 35px;
+
+    &__container {
+      background-image: url("../img/form-img768.png");
+      background-size: 187px;
+      background-position-x: 88%;
+      background-position-y: 12px;
+    }
+
+    &__title {
+      margin-bottom: 9px;
+    }
+
+    &__desrc {
+      width: 60%;
+    }
+
+    &__form {
+      width: 65%;
+    }
+
+    &__modal-h2 {
+      /*Общий*/
+      font-size: 25px;
+    }
+
+    /*modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 999px*/
+    &__modal-container-pol {
+      height: 420px;
+      padding-top: 15px;
+
+      & .h2 {
+        font-size: 25px;
+      }
+    }
+
+    /* // modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 999px*/
+  }
+
+  /***Моя форма - main-form-999px***/
+}
+
+@include mini-tablet {
+
+  /***Моя форма - main-form-747px***/
+  .main-form {
+    padding-top: 26px;
+
+    &__container {
+      background-image: url("../img/form-img768.png");
+      background-size: 193px;
+      background-position-x: 88%;
+      background-position-y: 3px;
+    }
+
+    &__desrc {
+      width: 60%;
+    }
+
+    &__form {
+      width: 55%;
+    }
+  }
+
+  /*** // Моя форма - main-form-747px***/
+}
+
+@include mobile {
+  .modal-container {
+    padding-top: 32px;
+  }
+
+  /***Моя форма - main-form-580px***/
+  .main-form {
+    padding: 32px 0 67px;
+
+    &__container {
+      background-image: none;
+    }
+
+    &__title {
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    &__desrc {
+      width: 100%;
+    }
+
+    &__tooltip {
+      transform: translateX(-3px);
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__input {
+      margin-bottom: 27px;
+    }
+
+    &__btn {
+      /*Обычный
+      margin: 3px 0 14px -2px;*/
+      /*В галпе*/
+      margin: 3px 0 12px -2px;
+    }
+
+    &__checkbox-container {
+      font-size: 11.7px;
+    }
+
+    &__label-checkbox::before {
+      top: 0;
+    }
+
+    &__label-checkbox::after {
+      top: 2px;
+    }
+
+    /*modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 580px*/
+    &__modal-container-pol {
+      height: 395px;
+
+      & .simplebar-mask {
+        /*Не удалять!!*/
+        margin-top: 16px;
+      }
+
+      & .simplebar-offset {
+        /*Не удалять!!*/
+        top: -18px;
+      }
+
+      & .modal-close {
+        top: 17px;
+      }
+
+      & .h2 {
+        margin-top: 0;
+        margin-left: -5px;
+        font-size: 20px;
+      }
+
+      & p {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+
+    /* // modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 580*/
+    &__elephant-png {
+      margin-left: -19px;
+      margin-bottom: 14px;
+      width: 73px;
+      height: 50px;
+      background-image: url("../img/elephant-orange320.png");
+      /*Для codepen
+      background-image: url("https://arabic.cash/img/logo.png");*/
+    }
+
+    &__modal-h2 {
+      margin-left: -10px;
+      font-size: 24px;
+    }
+
+    &__modal-h2_elephant320 {
+      margin: 0;
+      width: 65%;
+      font-size: 16px;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+
+  /*** // Моя форма - main-form-580px***/
+}
+
+@include mini-mobile {
+  /***Моя форма - main-form-480px***/
+
+}

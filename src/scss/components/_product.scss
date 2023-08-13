@@ -1,0 +1,350 @@
+@import "../mixins/_breakpoint.scss";
+
+/*** product swiper-1920px***/
+.product {
+  padding: 41px 0 68px;
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__title-h2 {
+    margin-bottom: 21px;
+    font-size: 24px;
+    /*Здесь в Figm-е стоит 400*/
+    font-weight: 400;
+  }
+
+  &__swiper-wraper.swiper-wrapper {
+    /*Карточки одной ширины в слайдер*/
+    box-sizing: inherit;
+  }
+
+  &__item {
+    /*В галпе*/
+    padding-top: 86px;
+    flex-direction: column;/*Для выравнивание карточек product__info*/  
+  }
+
+  &__item.swiper-slide {
+    padding-bottom: 11px;
+  }
+
+  &__item.swiper-slide:nth-child(2n) {
+    padding-top: 62px;
+  }
+
+  &__item.swiper-slide:nth-child(2) &__image {
+    margin-left: 9px;
+  }
+
+  &__item.swiper-slide:nth-child(3) &__info {
+    padding-top: 15px;
+  }
+
+  &__item.swiper-slide:nth-child(4) &__info {
+    padding-top: 24px;
+  }
+
+  &__item.swiper-slide:nth-child(5) &__info {
+    margin-top: -10px;
+    padding-top: 0;
+  }
+
+  &__item.swiper-slide:nth-child(6) &__info {
+    padding-top: 18px;
+  }
+
+  &__article {
+    /*В обычном
+    padding: 0 7px 97px;*/
+    /*В галпе*/
+    padding: 0 7px 88px;
+  }
+
+  &__asterisk {
+	  display: inline-flex;
+  }
+
+  &__item:nth-child(3) img {
+    max-width: inherit;
+    margin-left: -9px;
+  }
+
+  &__info {
+    /*В обычном
+    padding: 14px 11px 9px 8px;*/
+    /*В галпе*/
+    padding: 15px 11px 17px 8px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  &__block {
+    margin-bottom: 13px;
+  }
+
+  &__title-h3 {
+    margin-bottom: 20px;
+  }
+
+  &__block-span {
+    bottom: 32px;
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    width: 75px;
+  }
+
+  &__pagination {
+    text-align: center;
+    margin-right: 7px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--color-white);
+  }
+}
+/*** // product swiper-1920px***/
+
+
+@include desktop {
+  /*** product swiper-1385px***/
+  .product {
+    padding: 35px 0 68px;
+  
+    &__title-h2 {
+      margin-bottom: 24px;
+    }    
+    
+    &__navigation {
+      top: 2px;
+      right: 2px;
+    }  
+
+    &__btn_prev {
+      margin-right: 13px;
+    } 
+
+    &__item.swiper-slide {
+      padding-top: 87px;
+    }  
+
+    /*В галпе*/
+    &__item.swiper-slide:nth-child(2) &__image {
+      margin-top: -6px;
+    }
+
+    /*В галпе*/
+    &__item.swiper-slide:nth-child(3) &__info {
+      padding-top: 9px;
+    }
+
+    &__article {
+      padding-bottom: 95px;
+    }
+
+    /*В галпе*/
+    &__asterisk {
+      top: 33px;
+    }
+
+    &__title-h3 {
+      margin-bottom: 11px;
+    }
+
+    &__button {
+      margin-top: 20px;
+    }
+  }  
+  /*** // product swiper 1385px***/
+}
+
+@include mini-desktop {}
+
+@include tablet {
+  /*** product swiper-999px***/
+  .product {
+		/*Обычный  
+    padding: 17px 0 69px;*/
+    /*В галпе*/
+    padding: 17px 0 71px;
+	
+	  &__title-h2 {
+      margin-bottom: 21px;
+    }
+
+     /*В галпе*/
+    &__item.swiper-slide {
+      padding-top: 88px;
+    }
+
+    /*В галпе*/
+    &__asterisk {
+      top: 34px;
+    }
+
+    /*В галпе*/
+    &__block-span {
+      bottom: 28px;
+    }
+
+    &__navigation {
+      top: -1.5px;
+      right: 2.8px;
+    }
+  }
+  /*** // product swiper-999px***/
+}
+
+@include mini-tablet {}
+
+@include mobile {
+  /*** product swiper-580px***/
+  .product {
+    padding: 34px 0 72px;
+
+    &__title-h2 {
+      margin-bottom: 23px;
+    }
+
+    &__swiper-container {
+      padding-bottom: 15px;
+    }
+
+    &__item.swiper-slide {
+      padding: 47px 8px 9px;
+    }  
+
+    &__item.swiper-slide:nth-child(2n) {
+      /*В обычном 
+      padding-top: 38px;*/ 
+      /*В галпе*/
+      padding-top: 44px;
+    }
+
+    &__item.swiper-slide:nth-child(2n) &__position {
+      /*В обычном  
+      margin-bottom: 9px;*/
+      /*В галпе*/
+      margin-bottom: 0;
+    }
+
+    &__item.swiper-slide:nth-child(2) &__image {
+      margin-left: 0;
+    }
+
+    &__item.swiper-slide:nth-child(2) &__info {
+      padding: 0;
+      font-size: 16px;
+    }
+
+    &__item.swiper-slide:nth-child(2) &__block {
+      margin-bottom: 21.5px;
+    }
+
+    &__item.swiper-slide:nth-child(3) img {
+      margin-left: 0;
+    }
+
+    &__item.swiper-slide:nth-child(3) &__info {
+      padding-top: 20px;
+    }
+
+    &__item.swiper-slide:nth-child(3) &__block {
+      margin-bottom: 21.5px;
+    }
+
+    &__item.swiper-slide:nth-child(4) &__info {
+      padding: 9px 0 8px;
+    }
+
+    &__item.swiper-slide:nth-child(5) &__info {
+      margin-top: 0;
+      padding-top: 9px;
+    }
+
+    &__item.swiper-slide:nth-child(5) &__block {
+      margin-bottom: 21.5px;
+    }
+
+    &__item.swiper-slide:nth-child(6) &__info {
+      padding: 6px 0 7px;
+    }
+
+    &__article {
+      /*В обычной  
+      padding: 0 7px 82px;*/
+      /*В галпе*/
+      padding: 0 7px 72px;
+    }
+
+    &__asterisk {
+      top: 16px;
+      left: 15px;
+      font-size: 12px;
+      line-height: 15px;
+
+      & svg {
+        margin-right: 6px;
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    &__info {
+      padding: 16px 0 0;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    &__block {
+      /*В галпе*/
+      margin-bottom: 23px;
+    }
+
+    &__title-h3 {
+      margin-bottom: 0;
+    }
+
+    &__h3-link {
+      font-size: 16px;
+      line-height: 20px;
+    }  
+
+    &__block-span {
+      bottom: 16px;
+      left: 15px;
+    }
+
+    &__button {
+      margin-top: 15px;
+      padding: 10px 24px;
+      line-height: 1;
+    }  
+
+    &__navigation-block320 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__navigation {
+      position: relative;
+      top: unset;
+      right: unset;
+      align-items: end;
+      margin: 0 auto;
+      z-index: 2;
+    }
+  }  
+}
+
+@include mini-mobile {}

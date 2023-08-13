@@ -1,0 +1,190 @@
+@import "../mixins/_breakpoint.scss";
+
+/*** Полезное useful-1920px ***/
+.useful {
+  padding: 18px 0 24px;
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    width: 75px;
+  }
+
+  &__pagination {
+    text-align: center;
+    margin-right: 7px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--color-white);
+  }
+  
+  &__image {
+    border: 1px solid transparent;
+    border-radius: 10px 10px 0 0;
+    width: 100%;  
+  }
+
+  &__list {
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;/*Для выравнивание карточек useful__info */
+    flex-direction: column;/*Для выравнивание карточек useful__info*/  
+    padding-bottom: 7px;
+    background-color: transparent;
+
+    &.swiper-slide {
+      position: relative;
+      height: auto;/*Для выравнивание карточек useful__info*/
+      border-radius: 10px;
+      background-color: var(--color-wildSand);
+    }
+  }
+
+  &__info {  
+    position: relative;/*Для кнопки  */
+    display: flex;/*Для выравнивание карточек li*/
+    justify-content: space-between;/*Для выравнивание карточек li*/
+    flex-direction: column;/*Для выравнивание карточек li*/  
+    /*В обычном*/
+    padding: 33px 30px 22px;
+    height: 100%;/*Для выравнивание карточек li*/
+  }
+
+  &__block {
+    margin-bottom: 36px;
+  }
+
+  &__desrc {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__link {
+    display: block;
+    padding: 17px 34px;
+    width: max-content;
+    outline: none;
+    -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  }
+}
+/*** // Полезное useful-1920px ***/
+
+
+@include desktop {
+  /***Полезное useful-1385px***/
+  .useful {
+    padding: 14px 0 35px;
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__info {
+      padding: 30px 36px 23px 30px;
+    }
+
+    &__block {
+      margin-bottom: 30px;
+    }
+
+    &__desrc {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__navigation {
+      top: 0;
+    }
+  }
+  /*** // Полезное useful-1385px ***/
+}
+
+@include tablet {
+  /***Полезное useful-999px***/
+  .useful {
+    /*Здесь свой ПП для Gulpa*/ 
+    padding: 18px 0 35px;
+  
+    &__info {
+      padding-right: 37px;
+    }
+
+    &__navigation {
+      right: 3px;     
+    }
+  } 
+  /*** // Полезное useful-999px ***/
+}
+
+@include mini-tablet {
+  /***Полезное useful-747px***/
+  
+}
+
+@include mobile {
+  /***Полезное useful-580px***/
+  .useful {
+    /*В обычном
+    padding: 19px 0 33px;*/
+    /*В Галпе*/
+    padding: 26px 0 33px;
+
+    &__title {
+      margin-bottom: 21px;
+      font-size: 24px;
+    }
+
+    &__swiper-container {
+      padding-bottom: 17px;
+    }
+
+    &__info {
+	    padding-top: 31px;
+      padding-right: 36px;
+    }
+
+    &__navigation-block320 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__navigation {
+      position: relative;
+      top: unset;    
+      right: unset;
+      align-items: end;
+      margin: 0 auto;
+      z-index: 2;    
+    }
+  }
+  /*** // Полезное useful-580px ***/
+}
+
+@include mini-mobile {
+  /***Полезное useful-480px***/
+  
+}

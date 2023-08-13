@@ -1,0 +1,52 @@
+@import "../mixins/_breakpoint.scss";
+
+/*** Меню ссылок - links-1920px***/
+.links {
+  padding-bottom: 7px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--color-dustyGray);
+
+    &:focus {
+      outline: none;
+      color: var(--color-mineShaft);
+      background-color: var(--color-mauve);
+    }
+
+    &:hover {
+      color: var(--color-mediumPurple);
+    }
+
+    &:active, .active-link {
+      color: var(--color-purpleHeart);
+    }
+
+    &::before {
+      content: "/";
+      position: absolute;
+      top: 2px;
+      right: -12px;
+    }
+  }
+}
+
+/*Не удалять!*/
+.active-link::before {
+  content: "";
+}
+/*** // Меню ссылок - links-1920px***/
+
+@include mobile {
+  /***links 580px***/
+}

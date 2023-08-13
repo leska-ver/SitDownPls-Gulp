@@ -1,0 +1,1205 @@
+@import "../mixins/_breakpoint.scss";
+/***Шапка header-1920***/
+.burger {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.header {
+  padding-bottom: 9px;
+  max-height: max-content;
+
+  &__fon320 {
+    display: none;
+    padding: 12px 49px;
+    background-color: var(--color-alabaster);
+  }
+
+  &__fon1920 {
+    margin-bottom: 35px;
+    background-color: var(--color-alabaster);
+  }
+
+  &__container {
+    display: flex;
+
+    &_top1024 {
+      /*В обычном
+      margin-bottom: 30px;*/	
+      /*В Галпе*/ 
+      margin-bottom: 31px;
+    }
+  }
+
+  &__map-phone {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    min-width: max-content;/*Для переполнения*/
+  }
+
+  &__desc-city {
+    display: flex;
+    margin-right: 12px;
+  }
+
+  &__desrc {
+    position: relative;
+    margin: auto 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-mineShaft);
+  } 
+
+  /*-Селектор Москва. Библиотечные стили-*/
+  &__city .choices__inner {
+    position: relative;
+    /*padding: 6.5px 4px;Не удалять, он для фокуса*/
+    border: 1px solid transparent;
+    min-height: min-content;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-mediumPurple);
+    -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    z-index: 2;
+  }
+
+  &__city .is-focused {
+    /*focus работает*/
+    color: var(--color-mauve);
+  }
+
+  &__city .choices__inner:hover {
+    color: var(--color-purpleHeart);
+    background-color: var(--color-blueChalk);
+  }
+
+  &__city .choices__inner:active {
+    color: var(--color-purpleHeart);
+    background-color: transparent;
+  }
+
+  &__city.is-focused .choices__inner {
+    /*Не удалять*/
+    border: 1px solid transparent;
+    color: var(--color-mauve);
+  }
+
+  &__city.is-focused:hover .choices__inner {
+    color: var(--color-purpleHeart);
+  }
+
+  &__city.is-open .choices__inner { 
+    /*типа active*/
+    border-radius: 0;
+    color: var(--color-purpleHeart);
+    background-color: transparent;
+  }
+
+  &__city[data-type*=select-one] .choices__inner {
+    padding: 0;
+  }
+
+  &__city .choices__list--single {
+    padding: 4px 24px 4px 4px;
+  }
+
+  &__city .choices[data-type*=select-one]:after {
+    top: 37%;
+    right: 18px;
+    border: 0;
+    width: 15px;
+    height: 15px;
+    /*Для компа*/
+    background-image: url("../img/jackdaw.png");
+    /*Для codepen*/
+    /* background-image: url("https://e7.pngegg.com/pngimages/392/1011/png-clipart-stopwatch-graphics-xchng-timer-watch-accessories-timer.png");  */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(50%);
+    -webkit-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    -ms-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    -moz-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    -o-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    z-index: 15;
+  }
+
+  &__city.choices[data-type*=select-one]:focus:after {
+    /*Для компа*/
+    background-image: url("../img/jackdawC99.png");
+    /*Для codepen*/
+    /* background-image: url("https://e7.pngegg.com/pngimages/392/1011/png-clipart-stopwatch-graphics-xchng-timer-watch-accessories-timer.png");  */
+  }
+
+  &__city.choices[data-type*=select-one]:hover:after {
+    /*Для компа*/
+    background-image: url("../img/jackdaw703.png");
+    /*Для codepen*/
+    /* background-image: url("https://e7.pngegg.com/pngimages/392/1011/png-clipart-stopwatch-graphics-xchng-timer-watch-accessories-timer.png"); */
+  }
+
+  &__city .choices[data-type*=select-one].is-open:after {
+    margin-top: 0;
+    /*Для компа*/
+    background-image: url("../img/jackdaw703.png");
+    /*Для codepen*/
+    /* background-image: url("https://e7.pngegg.com/pngimages/392/1011/png-clipart-stopwatch-graphics-xchng-timer-watch-accessories-timer.png"); */
+    background-repeat: no-repeat;
+    transform: rotate(180deg) translate(-50%, 2px);
+  }
+
+  &__city .choices__inner {
+    background-color: transparent;
+  }
+
+  /*Стили option-ов которые без value*/
+  &__city .choices__list--dropdown {
+    top: 45px;
+    border-radius: 0;
+    border: none;
+    z-index: 12;
+  }
+
+  &__city .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: var(--color-magnolia);
+  }
+  /*Конец стили option-ов которые без value*/
+
+
+  /*Изчеснит с option-ом выбраный объект. С disabled эфект лучше работает*/
+  &__city .choices__list .choices__item.is-selected {
+    display: none;
+  }
+  /*-Конец селектор Москва-*/
+
+  /*-Телефон-*/
+  &__linkPhone {
+    display: flex;
+    align-items: center;
+    outline-offset: 4px;
+    font-size: 14.5px;
+    color: var(--color-crusta);
+    outline:  none;
+    -webkit-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    &:focus {
+      color: var(--color-koromiko);
+    }
+
+    &:hover {
+      color: var(--color-koromiko);
+      background-color: var(--color-milkPunch);
+    }
+
+    &:active {
+      color: var(--color-rust);
+      background-color: transparent;
+      outline: none;
+    }
+
+    // В Галпе у svg(to-sprite->svg) удаляем fill и ставим его здесь
+    & svg {
+      fill: #FF6E30;
+      -webkit-transition: svg .4s ease-in-out;
+      -ms-transition: svg .4s ease-in-out;
+      -moz-transition: svg .4s ease-in-out;
+      -o-transition: svg .4s ease-in-out;
+      transition: svg .4s ease-in-out;
+    }
+
+    &:focus svg {
+      fill: var(--color-koromiko);
+    }
+
+    // В Галпе появляется
+    &:focus-visible svg {
+      outline: none;
+    }
+
+    &:hover svg {
+      fill: var(--color-koromiko);
+    }
+
+    &:active svg {
+      fill: var(--color-rust);
+    }
+  }
+  /* // В Галпе у svg(to-sprite->svg) удаляем fill и ставим его здесь*/
+
+  /*В обычной
+  .header__linkPhone path {
+    -webkit-transition: path .4s ease-in-out;
+    -ms-transition: path .4s ease-in-out;
+    -moz-transition: path .4s ease-in-out;
+    -o-transition: path .4s ease-in-out;
+    transition: path .4s ease-in-out;
+  }
+
+  .header__linkPhone:focus path {
+    fill: var(--color-koromiko);
+  }
+
+  .header__linkPhone:hover path {
+    fill: var(--color-koromiko);
+  }
+
+  .header__linkPhone:active path {
+    fill: var(--color-rust);
+  }*/
+
+  &__list-about {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 20px;
+    padding: 6px 0;
+  }
+
+  &__ulFon1024 {
+    display: none;
+  }
+
+  &__item-about:not(:last-child) {
+    margin-right: 44px;
+  }
+
+  &__link-about {
+    padding: 4px 10px;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-dustyGray);
+    -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+
+    &:focus {
+      color: var(--color-mediumPurple);
+      outline: none;
+    }
+
+    &:hover {
+      color: var(--color-purpleHeart);
+      background-color: var(--color-blueChalk);
+    }
+
+    &:active {
+      color: var(--color-purpleHeart);
+    }
+  } 
+
+  &__logo {
+    margin-right: auto;
+    min-width: max-content;/*Чтобы в переполнение не ломало*/
+    -webkit-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-purpleHeart);
+      outline-offset: 8px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.4;
+      outline: none;
+    }
+  }
+
+  &__block-burger {
+    margin: -5px -5px -5px 20px;
+  }
+
+  &__nav { 
+    /*Нужен для разворота burger*/
+    z-index: 2;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 71px;
+  }
+
+  &__link {
+    padding: 4px 10px;
+    font-size: 16px;
+    line-height: 21px;
+    outline: none;
+    -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+
+    &:focus {
+      color: var(--color-mediumPurple);
+    }
+
+    &:hover {
+      color: var(--color-mineShaft);
+      background-color: var(--color-blueChalk);
+    }
+
+    &:active {
+      color: var(--color-purpleHeart);
+    }
+  }
+
+  &__list-about-2 {
+    display: none;
+  }
+
+  /**Поиск(форма) раздел**/
+  /* .header__bottom {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 28px;
+  } */
+
+  &__form {
+    position: relative;
+    display: flex;
+    margin-right: auto;
+    border: 2px solid transparent;
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+  }
+
+  &__search-relative {
+    position: relative;
+    width: 64.2%;
+  }
+
+  &__form:active &__search-loupe path {
+    fill: var(--color-mediumPurple);
+  }
+
+  &__search-loupe {
+    position: absolute;
+    /*В обычном
+    top: 20px;*/	
+    /*В Галпе*/
+    top: 14px;
+    left: 30px;
+  }
+
+  &__input {
+    padding: 18px 55px;
+    border: 2px solid var(--color-wildSand);
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-mineShaft);
+    background-color: var(--color-wildSand);
+    outline: none;
+    -webkit-transition: border .4s ease-in-out;
+    -ms-transition: border .4s ease-in-out;
+    -moz-transition: border .4s ease-in-out;
+    -o-transition: border .4s ease-in-out;
+    transition: border .4s ease-in-out;
+
+    &:focus {
+      border: 2px solid var(--color-gallery);
+      background-color: var(--color-gallery);
+    }
+
+    &:hover {
+      border: 2px solid var(--color-mediumPurple);
+      background-color: var(--color-magnolia);
+      z-index: 2;
+    }
+
+    &:active {
+      border: 2px solid var(--color-wildSand);
+      background-color: var(--color-wildSand);
+    }
+
+    &::placeholder {
+      color: var(--color-dustyGray);
+    }
+  }
+
+  &__input:hover input[type="search"]::-webkit-search-results-decoration {
+    /*Окончательно крест убрала*/
+    opacity: 0;
+  }
+
+  /*Кнопка стрелка*/
+  &__search-arrow {
+    position: absolute;
+    top: 21%;
+    right: 27px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+      opacity: .5;
+    }
+  }
+
+  &__form .choices {
+    /*.header__сategories-form*/
+    border: 2px solid var(--color-wildSand);
+    border-radius: 0 10px 10px 0;
+    width: 25.3%;
+    outline: none;
+    -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    z-index: 5;
+  }
+
+  &__form .choices:focus {
+    border: 2px solid var(--color-mediumPurple);
+  }
+
+  &__form .choices:hover {
+    border: 2px solid var(--color-mediumPurple);
+    background-color: var(--color-magnolia);
+  }
+
+  &__form .choices:active {
+    border: 2px solid var(--color-purpleHeart);
+    background-color: transparent;
+  }
+
+  &__form .choices__inner {
+    position: relative;
+    /*Не удалять, он для фокуса*/
+    padding: 16px 27px;
+    min-height: min-content;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-mediumPurple);
+    background-color: transparent;
+  }
+
+  /*Для .header__сategories-form .choices__inner - padding-bottom отдельно встаёт*/
+  &__form .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 12px;
+    /*Не удалять!*/
+    border: none;
+  }
+
+  &__form .choices__input {
+    font-family: 'OpenSsansRregular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-mediumPurple);
+  }
+
+  &__form .choices[data-type*=select-one]:after {
+    top: 40%;
+    right: 34px;
+    border: 0;
+    width: 15px;
+    height: 15px; 
+    /*Для компа*/
+    background-image: url("../img/jackdaw.png");
+    /*Для codepen*/
+    /* background-image: url("https://e7.pngegg.com/pngimages/392/1011/png-clipart-stopwatch-graphics-xchng-timer-watch-accessories-timer.png");  */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(50%);
+    -webkit-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    -ms-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    -moz-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    -o-transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    transition: transform .4s ease-in-out, background-image .4s ease-in-out;
+    z-index: 15;
+  }
+
+  /*Поворот arrow в .is-open. Не удалять! Заданые стили чтобы стрелка не прыгала при открывания*/
+  &__form .choices[data-type*=select-one].is-open:after {
+    right: 26px;
+    transform: rotate(180deg) translate(0%, 0);
+  }
+
+  /*Option внутри селекта Категория*/
+  &__form .choices__list--dropdown {
+    top: 108%;
+    left: -2px;
+    padding: 17px 18px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 101%;;
+    z-index: 3;
+  }
+
+  &__form .choices__list--dropdown .choices__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 11px;
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: repeat(5, 32px);
+    /*Отключили скрол у .choices__list--dropdown .choices__list*/
+    overflow: hidden;
+  }
+
+  /*Границы текста для ховера*/
+  &__form .choices__list--dropdown .choices__item--selectable {
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+
+  /*Изчеснит с option-ом выбраный объект. С .choices__placeholder эфект лучше работает*/
+  &__form .choices__list .choices__item.is-selected,
+  &__form .choices__list.choices__list--dropdown .choices__placeholder {
+    display: none;
+  }
+
+  &__shop {
+    display: flex;
+    align-items: center;
+    margin-left: -7px;
+
+    &_1024, &_999 {
+      display: none;
+    }
+
+    &-personal {
+      margin-right: 32px;
+    }
+
+    &-personal, &-cart {  
+      -webkit-transition: fill .4s ease-in-out, background-color .4s ease-in-out;
+      -ms-transition: fill .4s ease-in-out, background-color .4s ease-in-out;
+      -moz-transition: fill .4s ease-in-out, background-color .4s ease-in-out;
+      -o-transition: fill .4s ease-in-out, background-color .4s ease-in-out;
+      transition: fill .4s ease-in-out, background-color .4s ease-in-out;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /*Для обычного
+    .header__shop-personal:focus path, .header__shop-cart:focus path:nth-child(1) {
+      fill: var(--color-mauve);
+    }*/
+
+    // Ддя Галпа. <!-- В Галпе у svg(to-sprite->svg) удаляем fill и ставим его здесь -->
+    &-personal svg, &-cart svg {  
+      fill: var(--color-mediumPurple);
+    }
+
+    &-personal:focus svg, &-cart:focus svg, &-cart:focus path:nth-child(1) {
+      fill: var(--color-mauve);
+    }
+
+    /*Ддя Галпа*/
+    &-personal:hover svg, &-cart:hover svg {
+      background-color: var(--color-mauve);
+      fill: var(--color-white);
+    }
+
+    /*Для обычного
+    .header__shop-personal:hover path, .header__shop-cart:hover path:nth-child(1) {
+      fill: var(--color-white);
+    }*/
+
+    // Ддя Галпа. <!-- В Галпе у svg(to-sprite->svg) удаляем fill и ставим его здесь -->
+    &-personal:active svg, &__shop-cart:active svg {
+      background-color: transparent;
+      fill: var(--color-purpleHeart);
+    }
+  }
+  /*Для обычного
+  .header__shop-personal:active path, .header__shop-cart:active path:nth-child(1) {
+    fill: var(--color-purpleHeart);  
+  }*/
+  /*-Конец селектор с категориями(Диван). Библиотечные стили-*/
+}
+/*** // Шапка-header-1920***/
+
+
+@include desktop {
+  /***Шапка header-1385***/
+  .header__fon1920 {
+    margin-bottom: 5px;
+    background-color: transparent;
+  }
+
+  .header__map-phone {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__desc-city {
+    margin-right: auto;
+    padding-top: 6px;
+  }
+
+  .header__city .choices__inner {
+    padding-left: 4px;
+  }
+
+  .header__city .choices[data-type*=select-one]:after {
+    right: 22px;
+  }  
+
+  .header__ulFon1024 {
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 11px;
+    background-color: var(--color-alabaster);
+  }
+
+  .header__list-about {
+    justify-content: start;
+    margin-left: -10px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .header__linkPhone {
+    padding-top: 3px;
+  }
+
+  .header__list-about_block1024 {
+    display: none;
+  }
+
+  .header__list {
+    width: 101.2%;
+    justify-content: space-between;
+  }
+
+  .header__item:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  .header__search-relative {
+    width: 69.2%;
+  }
+
+  .header__search-loupe {
+    top: 33%;
+  }
+
+  .header__item-about:not(:last-child) {
+    margin-right: 5%;
+  }
+  
+  .header__shop {
+    padding-top: 5px;
+    padding-left: 13px;
+
+    &_1024 {
+      display: flex;
+    }
+
+    &_1920 {
+      display: none;
+    }
+
+    &-personal {
+      margin-right: 32px;
+    }
+  }
+
+  .header__container_top1024 {
+    padding-top: 32px;
+  }
+
+  .header__logo {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .header__block-burger {
+    margin-right: -10px;
+  }
+
+  .header__search-arrow {
+    top: 24%;
+    right: 30px;
+  }
+
+  .header__form .choices[data-type*=select-one] .choices__inner {
+    padding-left: 20px;
+  }
+
+  .header__сategories-form {
+    min-width: 31%;
+  }
+  
+  .header__form .choices[data-type*=select-one]:after{
+    top: 39%;
+    right: 35px;
+  }
+
+  .header__input {
+    padding: 20px 55px;
+  }  
+  /*** // Шапка header-1385px***/
+}
+
+
+@include tablet {
+  /*** Шапка header-999px***/
+  .burger {
+    display: block;
+    background-color: transparent;
+    outline-offset: 8px;
+    z-index: 17;
+    -webkit-transition: background-color .4s ease-in-out;
+    -ms-transition: background-color .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+  }
+
+  .burger:focus {
+    outline: none;
+  }
+
+  .burger:hover {
+    background-color: var(--color-blueChalk);
+  }
+
+  .burger:active {
+    background-color: transparent;
+  }
+
+  .burger span {
+    display: block;
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: var(--color-mediumPurple);
+    border-radius: 9px;
+    opacity: 1;
+    margin-top: 8px;
+    left: 8px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: background-color .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+  }
+
+  /*Палочки*/
+  .burger span:nth-child(1) {
+    top: 0px;
+  }
+
+  .burger span:nth-child(2) {
+    top: 11px;
+  }
+
+  .burger span:nth-child(3) {
+    top: 21.5px;
+  }
+
+  .burger:focus span,
+  .burger:focus span:nth-child(2),
+  .burger:focus span:nth-child(3),
+  .burger:hover span,
+  .burger:hover span:nth-child(2),
+  .burger:hover span:nth-child(3),
+  .burger:active span,
+  .burger:active span:nth-child(2),
+  .burger:active span:nth-child(3) {
+    background-color: var(--color-purpleHeart);
+  }
+
+  /*Крест*/
+  .burger.open span:nth-child(1) {
+    top: 13px;
+    left: -4px;
+    width: 38px;
+    /*38px длина палочки*/
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .burger.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .burger.open span:nth-child(3) {
+    top: 13px;
+    left: -5px;
+    width: 38px;
+    /*38px длина палочки*/
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .header__block-menu {
+    position: absolute;
+    top: 138px;
+    display: grid;
+    grid-template-columns: 67% 163px;
+    grid-gap: 17px;
+    margin-left: -67px;
+    padding-top: 54px;
+    width: 101%;
+    background-color: var(--color-white);
+    z-index: 16;
+  }
+
+  /*JS для burger-а*/
+  .menu {
+    transform: translateX(-300%);
+    /*Скрывает меню*/
+  }
+
+  .menu.is-active {
+    /*is-active js*/
+    transform: none;
+  }
+
+  .burger.open span:nth-child(1),
+  .burger.open span:nth-child(3) {
+    top: 11px;
+    left: 7px;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-dustyGray);
+  }
+
+  .burger.open:focus span:nth-child(1),
+  .burger.open:focus span:nth-child(3) {
+    background-color: var(--color-mediumPurple);
+  }
+
+  .burger.open:hover span:nth-child(1),
+  .burger.open:hover span:nth-child(3) {
+    background-color: var(--color-purpleHeart);
+  }
+
+  .burger.open span:nth-child(1) {
+    -webkit-transform: rotate(-315deg);
+    -moz-transform: rotate(-315deg);
+    -o-transform: rotate(-315deg);
+    transform: rotate(-315deg);
+  }
+
+  .burger.open span:nth-child(3) {
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+  }
+
+  .header {
+    padding-bottom: 7px;
+
+    &__container999 { 
+      padding-right: 0;
+    }
+
+    &__ulFon1024 {
+      /* Здесь свой ПП для Gulp-a*/
+      padding-bottom: 11px;
+    }
+
+    &__container_top1024 {
+      margin-bottom: 1px; 
+      /*В обычном*/
+      padding: 33px 71px 28px 77px;
+    }
+
+    &__desc-city {
+      margin-right: auto;
+    }
+
+    &__item-about:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &__logo {
+      margin: 0 auto;
+
+      & img {
+        margin-left: 19%;
+      }
+    }
+
+    &__search-relative {
+      width: 70%;
+    }
+
+    &__search-arrow {
+      right: 27px;
+    }
+
+    &__form .choices__list--dropdown .choices__list {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 32px);
+    }
+
+    &__form .choices[data-type*=select-one] .choices__inner {
+      padding-left: 24px;
+    }
+
+    &__сategories-form {
+      min-width: 30%;
+
+      & .choices__inner {
+        padding-left: 23px;
+      }
+    }
+
+    &__block-burger {
+      margin-top: -6px;
+      margin-left: -13px;
+      order: -1;
+    }  
+
+    &__nav {
+      margin-left: 65px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 144px 1fr;
+      grid-template-rows: repeat(3, 63px);
+      grid-auto-flow: column;
+
+      &-about {
+        padding: 0;
+      } 
+    }
+    /*Конец JS для burger-а*/
+
+    &__shop_1024 {
+      display: none;
+    }
+
+    &__shop_999 {
+      display: flex;
+      margin-left: -6px;
+      padding-top: 0;
+      padding-left: 0;
+    }
+
+    &__elephant-svg {
+      margin-top: 11px;
+      background-image: url("../img/elephant.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+    }
+  } 
+  /*** // Шапка header-999px***/
+}
+
+
+@include mini-tablet {
+  /***Шапка header-747px***/
+  .header__container_top1024 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .header__item-about:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .header__form .choices[data-type*=select-one]:after {
+    right: 20px;
+  }
+
+  .header__сategories-form .choices__inner {
+    padding-left: 7px;
+  }
+
+  .header__list-about {
+    display: none;
+  }
+
+  .header__link-about {
+    display: block;
+    line-height: 19px;
+  }
+  /*** // Шапка header-747px***/
+}
+
+
+@include mobile {/*580px*/
+  /*В Галпе*/
+  .container {/*Не удалять*/
+    padding: 0 13px;
+  }
+
+  /***Шапка header-580px***/
+  .header__fon320 {
+    display: block;
+    /*В Галпе*/
+    padding: 12px 49px;
+  }
+  
+  .header__block-menu {
+    top: 132px; 
+    display: inline-block;
+    width: 121%;    
+  }
+  
+  .header__list {
+    grid-template-columns: 250px;
+    grid-template-rows: repeat(6, 62px);
+  }
+
+  .header__link {
+    display: block;
+    padding: 11px 10px;
+  }
+
+  .header__elephant-svg {
+    display: none;
+  }
+
+  .header__map-phone {
+    margin-bottom: 15px;
+  }
+
+  .header__desc-city {
+    padding-top: 4px;
+  }
+
+  .header__linkPhone {
+    padding-top: 0;
+  }
+
+  .header__ulFon1024 {
+    display: none;
+  }
+
+  .header__list-about-2 {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    margin-left: -4px;
+    padding: 16px 4px;
+    width: 100%;
+    background-color: var(--color-wildSand);    
+  }
+
+  .header__item-about {
+    display: inline-block;
+  
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  .header__container_top1024 {
+    margin-bottom: 24px;
+  }
+
+  .header__logo_320 {
+    display: none;
+  }
+
+  .header__logo img {
+    margin-left: 0;
+  }
+
+  .header__form {
+    flex-direction: column;
+  }
+
+  .header__search-relative {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  .header__search-arrow {
+    top: 21%;
+    right: 23px;
+  }
+
+  .header__сategories-form {
+    min-width: 100%;
+  }
+
+  .header__form .choices__list--dropdown .choices__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 32px);
+  }
+
+  .header__block-burger {
+    margin-right: auto;
+  }
+  /*** // Шапка header-580px***/
+  
+}
+
+@include mini-mobile {
+  /***Шапка header-480px***/
+  .header__map-phone {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;    
+  }
+
+  .header__logo {
+    margin: 0 4px;
+    padding: 0;
+    order: 1;
+
+    &:focus {
+      outline-offset: 2px;
+    }
+  }
+
+  .header__block-burger {
+    margin-left: -5px;
+  }  
+
+  .header__form .choices {
+    width: 98%;
+  }  
+  
+  .header__сategories-form .choices__inner {
+    padding-left: 23px;
+  }
+
+  .header__form .choices[data-type*=select-one]:after {
+    right: 33px;
+  }
+  /*** // Шапка header-480px***/
+}
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shorcut icon" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SitDownPls-Сотрудничество</title>
+  <!-- <link rel="stylesheet" href="css/choices.min.css"> -->
+  <link rel="stylesheet" href="resources/choices.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Теперь всё это в папке main.min.css-->
+  <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Для семантики если нет заголовка h1 в вёрстке. Ставим скрытый заголовок.-->
+    <h1 class="visually-hidden">Я для семантики</h1>
+    @include('partials/header.html')
+    <main>
+      @include('partials/partnership.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+
+
+
+
+  
+  <script defer src="resources/choices.min.js"></script>
+  <!--Аккордеон тоже самое и для бургера-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!--минифицированный библиотека-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+  <!--мои В main.js поставили, а здесь не удалять-->
+  <!-- <script src="js/SitDownPls.js"></script>-->
+  <script defer src="js/main.js"></script>
+</body>
+</html>

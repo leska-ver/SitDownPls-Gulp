@@ -1,0 +1,307 @@
+@import "../mixins/_breakpoint.scss";
+
+/***Слайдер hero-1920***/
+.hero {
+  position: relative;
+  /*margin-top - не удалять*/
+  margin-top: 22px;
+  /*В обычном	
+    padding: 0 0 35px;*/
+  /*В Галпе*/
+  padding: 0 0 30px;
+
+  &__container .swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;  
+  }
+
+  &__container .swiper-slide {
+    background-position: bottom;
+  }
+
+  &__block-container {
+    position: relative; 
+    /*В обычном	
+    padding-top: 43px;*/
+    /*В Галпе*/
+    padding-top: 48px;
+    padding-bottom: 66px;
+    z-index: 5;
+  }
+
+  &__photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*Запасные варианты, не удалять*/
+    background-color: var(--color-linkWater);
+    background-image: url("../img/hero-art4.jpg");
+
+    &--1 {
+      background-image: url("../img/hero-art1.jpg");
+    }
+
+    &--2 {
+      background-image: url("../img/hero-art2.jpg");
+    }
+
+    &--3 {
+      background-image: url("../img/hero-art3.jpg");
+    }
+  }
+
+  &__photo--3 &__title {
+    width: 551px;
+    color: var(--color-white);
+  }
+
+  &__padding {
+    margin-bottom: 14px;
+    padding: 0 49px;
+  }
+
+  &__title {
+    margin-top: 35px;
+    margin-bottom: 50px;
+    width: 492px;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: left;
+    color: var(--color-dustyGray);
+  }
+
+	&__span-nowrap {
+	  white-space: nowrap;    
+	}
+
+  &__btn {
+    pointer-events: all;
+    padding: 21px 51px;
+    border: 2px solid transparent;
+    color: var(--color-white);
+    background-color: var(--color-mediumPurple);
+  
+    &:focus {
+      background-color: var(--color-mauve);
+      border: 2px solid var(--color-mediumPurple);
+      outline: none;
+    }
+
+    &:hover {
+      background-color: var(--color-mauve);  
+    }
+
+    &:active {
+      background-color: var(--color-purpleHeart);  
+    }
+
+    &:disabled {
+      background-color: var(--color-gallery);
+      color: var(--color-dustyGray);
+    }
+
+    &-none1920 {
+      display: none;
+    }
+  }
+
+  &__pagination.swiper-pagination {
+    bottom: 5px; 
+  }
+
+  &__pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__pagination .swiper-pagination-bullet-active {
+    background-color: var(--color-mineShaft);
+  }
+
+  &__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    color: transparent;
+    cursor: pointer;
+  }
+
+  &__pagination.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 9px;
+  }
+  /*** // Слайдер hero-1920***/
+}  
+
+
+@include desktop {  
+  /***Слайдер hero-1385***/
+  .hero {
+    /*В Галпе*/
+    padding: 0 0 33px;
+
+    &__photo {
+      padding-bottom: 81px;
+      background-image: url("../img/hero-art4-1024.jpg");
+
+      &--1 {
+        background-image: url("../img/hero-art1-1024.jpg");
+      }
+
+      &--2 {
+        background-image: url("../img/hero-art2-1024.jpg");
+      }
+
+      &--3 {
+        background-image: url("../img/hero-art3-1024.jpg");
+      }
+    } 
+
+    &__block-container {
+      /*В Галпе .container глучить*/
+      padding: 0 36px;
+    }
+
+    &__padding {
+      margin-bottom: 0;
+      padding: 44px 0 0;    
+    }
+
+    &__title {
+      margin-bottom: 48px;
+    }
+    
+    &__btn {
+      padding: 19px 48px;
+      font-size: 17px;
+      display: inline-block;
+    }  
+
+    &__pagination.swiper-pagination {
+      bottom: 4px;
+    }
+
+    &__pagination.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include tablet {
+  /***Слайдер hero-999px***/
+  .hero__photo {
+    background-image: url("../img/hero-art4-768.jpg");
+
+    &--1 {
+      background-image: url("../img/hero-art1-768.jpg");
+    }
+
+    &--2 {
+      background-image: url("../img/hero-art2-768.jpg");
+    }
+
+    &--3 {
+      background-image: url("../img/hero-art3-768.jpg");
+    } 
+  }
+
+  .hero__block-container {
+    /*В Галпе .container глучить*/
+    padding: 0 71px;
+  }
+}  
+
+@include mini-tablet {
+  /***Слайдер hero-747px***/
+  .hero__title {
+    margin-bottom: 45px;
+    width: 410px;
+    font-size: 36px;
+    line-height: 50px;
+  }  
+
+  .hero__padding {
+    padding: 15px 0 0;
+  }
+
+}  
+
+@include mobile {
+  /***Слайдер hero-580px***/
+  .hero {
+    margin-top: 25px; 
+
+    &__photo {
+      /*В Галпе*/
+      padding-bottom: 81px;
+    }  
+
+    &__container .swiper {
+      margin-bottom: 33px;
+    }
+
+    &__title {
+      margin: 32px 0 43px;
+      width: 208px;
+      font-size: 20px;
+      line-height: 26.7px;
+    }    
+
+    &__btn-none1920 {
+      display: block;
+      margin: 0 auto;
+      padding: 19px 35px;
+      width: 93%;
+      font-size: 18px;
+      text-align: center;
+      color: var(--color-white);
+      background-color: var(--color-mediumPurple);    
+    }
+
+    &__btn_none580 {
+      display: none;
+    }
+
+    &__btn {
+      padding: 19px 48px;
+    }
+
+    &__padding {
+      padding: 0;
+    }
+
+    &__photo {
+      background-image: url("../img/hero-art4-320.jpg");
+
+      &--1 {
+        background-image: url("../img/hero-art1-320.jpg");
+      }
+
+      &--2 {
+        background-image: url("../img/hero-art2-320.jpg");
+      }
+
+      &--3 {
+        background-image: url("../img/hero-art3-320.jpg");
+      }
+    }
+
+    &__block-container {
+      padding: 0 29px;
+    }
+
+    &__pagination.swiper-pagination {
+      bottom: -16px;
+    }
+
+    &__pagination.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+      margin-right: 3px;
+    }
+
+    &__pagination .swiper-pagination-bullet {
+      width: 7px;
+      height: 7px;
+    }
+  }
+}  
+
+@include mini-mobile {
+  /***Слайдер hero-480px***/
+
+}  

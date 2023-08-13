@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shorcut icon" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="мебельный магазин SitDownPls карточка товара">
+  <title>SitDownPls-Gulp</title>
+  <!--Скроллбар main-form/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ-->
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <!-- <link rel="stylesheet" href="css/choices.min.css"> -->
+  <link rel="stylesheet" href="resources/choices.min.css">
+  <link rel="stylesheet" href="resources/swiper.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Теперь всё это в папке main.min.css-->
+  <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Для семантики если нет заголовка h1 в вёрстке. Ставим скрытый заголовок.-->
+    <h1 class="visually-hidden">Я для семантики</h1>
+    @include('partials/header.html')
+    <main>
+      @include('partials/hero.html')
+      @include('partials/offer.html')
+      @include('partials/divan.html')
+      @include('partials/banner.html')
+      @include('partials/top.html')
+      @include('partials/useful.html')
+      @include('partials/main-form.html')
+    </main>
+    @include('partials/footer.html')
+  </div><!-- wrapper -->
+
+
+
+
+  <!--Аккордеон тоже самое и для бургера-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!--минифицированный библиотека-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <!--Скроллбар main-form/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ-->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>  
+
+  <!--мои. В main.js поставили, а здесь не удалять-->
+  <!-- <script src="js/SitDownPls.js"></script> -->
+  <!--modakl для main-form и d-31/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ-->
+  <!-- <script src="js/modal.js"></script> -->
+
+  <!--<svg>
+    <use xlink:href="img/sprite.svg#test"></use>
+  </svg> -->
+  
+    <!-- Биб. js -->
+  <script defer src="resources/swiper.min.js"></script>
+  <script defer src="resources/inputmask.min.js"></script>
+  <script defer src="resources/just-validate.js"></script>
+  <script defer src="resources/choices.min.js"></script>
+
+  <!-- Собранный js -->
+  <script defer src="js/main.js"></script>
+</body>
+</html>

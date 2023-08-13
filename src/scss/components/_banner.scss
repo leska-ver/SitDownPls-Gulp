@@ -1,0 +1,139 @@
+@import "../mixins/_breakpoint.scss";
+
+/***Баннер banner-1920px***/
+.banner {
+  position: relative;/*Для кнопки в 320px*/
+
+  &__block-img {
+    /*В обычном
+    padding: 152px 0 150px;*/
+    /*В Галпе*/	
+    padding: 152px 0;
+    background-image: url("../img/banner-1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-linkWater);
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-family: 'Playfair', sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 72px;
+    color: var(--color-straw);
+  }
+
+  &__desrc {
+    margin-bottom: 51px;
+    width: 472px;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 57px;
+    color: var(--color-white);
+  }
+
+  &__btn {
+    pointer-events: all;
+    /*Чтобы чуствовала ашка свои вертикальные края, обязательно ставим inline-block*/
+    display: inline-block;
+    padding: 20px 33px;
+    border: 2px solid transparent;
+    color: var(--color-white);
+    background-color: var(--color-mediumPurple);
+
+    &:focus {
+      background-color: var(--color-mauve);
+      border: 2px solid var(--color-mediumPurple);
+      outline: none;
+    }
+
+    &:hover {
+      background-color: var(--color-mauve);
+    }
+
+    &:active {
+      background-color: var(--color-purpleHeart);
+    }
+  }
+}
+/*** // Баннер banner-1920px***/
+
+@include desktop {
+  /***Баннер banner-1385px***/
+  .banner__block-img {
+    background-image: url("../img/banner-1024.jpg");
+  }  
+
+  .banner__desrc {
+    margin-bottom: 52px;
+    font-size: 44px;
+  }  
+  /*** // Баннер banner-1385px***/
+}
+
+@include tablet {
+  /***Баннер banner-999px***/
+  .banner__block-img {
+    padding:  155px 0 151px;
+  }
+  
+  .banner__block-container {
+    padding: 0 36px;
+  }
+  
+	.banner__desrc {
+		margin-bottom: 48px;
+	}
+  /*** // Баннер banner-999px***/
+}
+
+@include mini-tablet {
+  /***Баннер banner-747px***/
+  
+}
+
+@include mobile {
+  /***Баннер banner-580px***/
+  .banner {
+    margin-bottom: 58px;
+    padding-bottom: 5px;
+
+    &__block-img {
+      margin-bottom: 34px;
+      padding: 32px 0 112px;
+      background-image: url("../img/banner-320.jpg");
+    }
+
+    /*В Галпе seting.scss глучит*/
+    &__block-container {
+      padding: 0 13px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__desrc {
+      margin-bottom: 0;
+      font-size: 14.7px;
+      line-height: 19.2px;
+      width: 158px;
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: -52px;
+      width: 92%;
+      padding: 19px 30px;
+      text-align: center;
+    }
+  }
+  /*** // Баннер banner-580px***/
+}
+
+@include mini-mobile {
+  /***Баннер banner-480px***/
+  
+}

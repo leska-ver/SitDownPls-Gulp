@@ -1,0 +1,829 @@
+@import "mixins/_breakpoint.scss";
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  /*Для .wrapper*/
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'OpenSans', sans-serif;
+  /*Общий шрифт 400*/
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-mineShaft);
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+img, svg {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*h1,
+h2,
+h3,
+p,
+a {
+  перенос слов
+  word-wrap: break-word;
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+  /*Обязательно убираем маргины у заголовок(Саша-Скиллбохс) */
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* отключает поведение изменения размера для textarea(Блок сообщения) */
+textarea {
+  resize: none;
+}
+
+button {
+  /*Лупа*/
+  background-color: inherit;
+  border: none;
+}
+
+.btn {
+  position: relative;
+  padding: 19px 35px;
+  border: 2px solid var(--color-mediumPurple);
+  border-radius: 10px;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-mediumPurple);
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: bacground-color .4s ease-in-out;
+  -ms-transition: bacground-color .4s ease-in-out;
+  -moz-transition: bacground-color .4s ease-in-out;
+  -o-transition: bacground-color .4s ease-in-out;
+  transition: bacground-color .4s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+  color: var(--color-white);
+  background-color: var(--color-mauve);
+}
+
+.btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-mediumPurple);
+}
+
+.btn:active {
+  border: 2px solid var(--color-purpleHeart);
+  color: var(--color-white);
+  background-color: var(--color-purpleHeart);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  /*1380px = 1280px + 50px + 50px не менять!*/
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.h2 {
+  font-size: 48px;
+}
+
+.h3 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.desrc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--color-mineShaft);
+}
+
+.label-hiden {
+  /*Лупа инпут*/
+  position: absolute;
+  left: -1001%;
+}
+
+/*Убрали у браузера Google крест из инпута (.header__search)*/
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/*Селект. Убрала надпись Press to select*/
+.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+  display: none;
+}
+
+/*Названия в option стали горизонтальными*/
+.choices__list--dropdown .choices__item--selectable {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/*Чтобы в is-open и в select-one стрелка не прыгала. Прыгает у тех кто имеет свою иконку*/
+.choices[data-type*=select-one].is-open::after,
+.choices[data-type*=select-one]:after {
+  margin-top: 0;
+}
+
+/* Перебив библиотечных стиль .header__сategories-form*/
+.choices__placeholder {
+  opacity: 1;
+}
+
+/*Биб. слайдера*/
+.image-slider {
+  padding: 0;
+}
+
+.swiper-wraper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition-property: transform;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  /*Прячем синие кнопки у слайдера(в модалке)*/
+  opacity: 0;
+}
+
+/*В каталог - ссылка и стрелка ОБЩИЕ СТИЛИ top__link*/
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-mediumPurple);
+  transition: color .4s ease-in-out;
+  outline: none;
+}
+
+.link-card:focus .text-card::before {
+  right: -1px;
+}
+
+.link-card:focus .arrow-card {
+  border: 2px solid var(--color-mediumPurple);  
+  color: var(--color-white);
+  background: var(--color-mediumPurple);
+}
+
+.link-card:hover .text-card::before {
+  right: -1px;
+}
+
+.link-card:hover .arrow-card {
+  border: 2px solid var(--color-mediumPurple);
+  color: var(--color-white);
+  background: var(--color-mauve);
+}
+
+.link-card:active {
+  color: var(--color-purpleHeart);
+}
+
+.link-card:active .text-card::before {
+  right: -1px;
+  background: var(--color-purpleHeart);
+}
+
+.link-card:active .arrow-card {
+  border: 2px solid var(--color-purpleHeart); 
+  color: var(--color-white);
+  background: var(--color-purpleHeart);
+}
+
+.text-card {
+  position: relative;
+}
+
+.text-card::before {  
+  content: "";
+  position: absolute;
+  right: calc(100% + 1px);
+  height: 2px;
+  background: var(--color-mediumPurple);
+  transition: right .4s ease-in-out, background .4s ease-in-out;
+}
+
+.arrow-card {
+  position: relative;
+  border: 2px solid var(--color-mediumPurple);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  font-size: 21px;
+  line-height: 16px;
+  text-align: center;
+}  
+/* // В каталог - ссылка и стрелка ОБЩИЕ СТИЛИ top__link*/
+
+
+/*Общие продуктовые карточки divan__list-catalog__list-color-product__swiper-wraper*/
+.product-list {
+  position: relative;
+  display: flex;
+}
+
+.product-item {
+  position: relative;
+  display: flex;/*Для выравнивание карточек: divan__info, catalog__info, product__info*/
+  /*padding-bottom для переполнения*/
+  padding: 90px 15px 135px;
+  border-radius: 10px;
+  background-color: var(--color-wildSand);
+}
+
+.product-item.swiper-slide {
+  height: auto;/*Для выравнивание карточек: divan__info, catalog__info, product__info*/
+}
+
+.product-article {
+  display: flex;/*Для выравнивание карточек: divan__info, catalog__info, product__info*/
+  flex-direction: column;/*Для выравнивание карточек: divan__info, catalog__info, product__info*/
+}
+
+.product-asterisk {
+  position: absolute;
+  top: 34px;
+  left: 30px;
+  display: flex;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-crusta);
+}
+
+.product-asterisk svg {
+  margin-right: 7px;
+}
+
+.product-info {/*Карточки: divan__info, catalog__info, product__info*/
+  padding: 18px 11px 0 15px;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.product-block {
+  display: flex;/*Для выравнивание карточек li*/
+  justify-content: space-between;/*Для выравнивание карточек li*/
+  flex-direction: column;/*Для выравнивание карточек li*/ 
+  /*Для переполнения*/
+  margin-bottom: 16px;
+}
+
+.product-text {
+  display: block;
+  margin-top: 0;
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;/*h4 поумолчанию bold*/
+    font-size: 24px;
+    color: var(--color-mineShaft);
+    -webkit-transition: color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+    cursor: pointer;
+
+    &:focus {
+      color: var(--color-purpleHeart);
+      outline: none;
+    }
+
+    &:hover {
+      color: var(--color-mediumPurple);
+    }
+
+    &:active {
+      color: var(--color-purpleHeart);
+    }
+  }
+}
+
+.product-block-span {
+  position: absolute;
+  display: block; 
+  /*Для переполнения*/  
+  bottom: 30px; 
+}
+
+.product-span {
+  font-size: 16px;
+  color: var(--color-dustyGray);
+  line-height: 23.4px;
+}
+
+.product-btn {
+  display: block;
+  margin-top: 23px;
+  padding: 17px 33px;
+  border: 2px solid var(--color-mediumPurple);
+  border-radius: 10px;
+  width: max-content;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+}
+/* // Общие продуктовые карточки divan__list-catalog__list-color-product__swiper-wraper*/
+
+
+/*Стили формы ошибки, цвет текста в файле main-form.js и d-31.js - colorWrong: '#ff6972'*/
+.js-validate-error-label {
+  position: absolute;
+  top: -26.5px;
+  left: 20px;
+  font-size: 12px;
+}
+
+/*Для data-validate-field="checkbox"*/
+ .main-form__checkbox-container .js-validate-error-label, .d-31__form-checkbox-container .js-validate-error-label {
+  top: -15px;
+  left: 0px;
+}
+/* // Для data-validate-field="checkbox"*/
+
+/*Для JustValidate галочка-Принимаю в main-form и в d-31*/
+input[type=checkbox]:focus ~ label::before {
+  outline: none;
+  border: 2px solid rgb(255, 105, 114);
+  background-color: var(--color-mauve);
+}
+
+input[type=checkbox]:active ~ label::before {
+  border: 2px solid var(--color-sulu);
+}
+/* // Для JustValidate галочка-Принимаю в main-form и в d-31*/
+
+/*ховерит input в main-form и в d-31*/
+.main-form__input-checkbox:hover, input[type="checkbox"]:hover ~ label::before {
+  border: 1px solid var(--color-purpleHeart);
+  background-color: var(--color-purpleHeart);
+}
+
+/*---Скроллбар(d-31-ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ)---*/
+.simplebar-mask {
+  /*Чтобы текст не прятался в прокрутке в блок*/
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.simplebar-content-wrapper {
+  /*авто включение js для скролл*/
+  overflow: auto;
+}
+
+.simplebar-track.simplebar-vertical {
+  /*Прокрутку двигаем*/ 
+  right: 10px;
+  bottom: 20px;
+} 
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  /*Прокрутку двигаем*/
+  top: 65px;
+  right: 0;
+}
+
+.simplebar-scrollbar::before {
+  /*Из библиотеки*/
+  /*Здесь(кодепен) цвет не работает*/
+  /*На компе и в css работает*/
+  height: 70px;
+  background-color: var(--color-mediumPurple);
+  /* opacity: 1; */
+}
+/*--- // Скроллбар---*/
+
+/*** modal-Модальное окно***/
+.modal {  
+  display: none;
+  justify-content: center;
+  width: 750px;
+  background-color: var(--color-white);
+  position: fixed;
+  overflow: auto;/*Будет прокрутка когда она не умещается в экране*/
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 990;/*Для js*/
+  /*Для modal-active*/
+  transform: scale(0);
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  &-active {
+    display: block;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(51,51,51,.3);
+    transform: scale(1);
+  }
+
+  &-wrap {
+    display: inline-block;  
+    margin: 39px;
+    max-width: 500px;
+    width: 100%;
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;  
+    background-color: white;  
+    transform: scale(1);
+    transition: transform 500ms;  
+  }
+  /*** // modal-Модальное окно***/
+
+  /*Крест выключатель модального окна*/
+  &-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    outline: none; 
+    border: 1px solid transparent; 
+    font-size: 25px;
+    -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    cursor: pointer;
+
+    &:focus {  
+      color: var(--color-mediumPurple);
+    }
+
+    &:hover {
+      color: var(--color-purpleHeart);
+      background-color: var(--color-blueChalk);
+    }
+
+    &:active {
+      color: var(--color-purpleHeart);
+      background-color: transparent;
+    }  
+  }
+  /* // Крест выключатель модального окна*/
+
+  /*---Стили формы ошибки, галка, цвет текста в файле d-31.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+  &-slonik {  
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 100%;
+    height: 100%;  
+    background-color: rgba(51, 51, 51, 0.3);
+
+    &-sps {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-basis: 624px;
+      padding: 116px 30px;
+      border-radius: 10px;
+      min-width: 260px;
+      background-color: var(--color-white);
+      opacity: 0;  
+      -webkit-transition: opacity 0.15s linear;
+      -ms-transition: opacity 0.15s linear;
+      -moz-transition: opacity 0.15s linear;
+      -o-transition: opacity 0.15s linear;
+      transition: opacity 0.15s linear;  
+      overflow: hidden; 
+    }
+  }
+}
+
+.main-form__slonik_js, .d-31__top-slonik_js {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;/*Для js перекрыть .modal*/
+}
+
+.main-form__slonik_js_active , .d-31__top-slonik_js_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+ .main-form__slonik-sps_js, .d-31__top-slonik-sps_js {
+  display: none;
+  opacity: 0;
+}
+
+ .main-form__slonik-sps_js_active, .d-31__top-slonik-sps_js_active {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*** // modal-Модальное окно***/
+/*--- // Стили формы ошибки, галка, цвет текста в файле d-31.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+
+/***Стрелки слайдеров***/
+.arrowNav-btn {
+  position: relative;
+  /*Сбить стили биб.-.swiper-button-lock*/
+  display: block;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 2px solid var(--color-mediumPurple);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -ms-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -moz-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -o-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  transition: background-color .4s ease-in-out, border .4s ease-in-out;
+
+  &:focus {
+    border-radius: 50%;
+    border: 2px solid var(--color-mediumPurple);
+    background-color: var(--color-mediumPurple);
+    outline: none;
+  }
+
+  &:hover {
+    border: 2px solid var(--color-mediumPurple);
+    background-color: var(--color-mauve);
+  }
+
+  &:active {
+    border: 2px solid var(--color-purpleHeart);
+    background-color: var(--color-purpleHeart);
+  }
+
+  &:disabled {
+    border: 2px solid var(--color-dustyGray);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 52%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transform-origin: center;
+  }
+
+  &_prev {
+    margin-right: 12px;
+
+    &::before {
+      border-left: 2px solid var(--color-mediumPurple);
+      border-bottom: 2px solid var(--color-mediumPurple);
+      -webkit-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+      -ms-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+      -moz-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+      -o-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+      transition: background-color .4s ease-in-out, border .4s ease-in-out;
+    }
+
+    &:disabled::before {
+      border-left: 2px solid var(--color-dustyGray);
+      border-bottom: 2px solid var(--color-dustyGray);
+    }
+
+    &:focus::before, &:hover::before, &:active::before {
+      border-left: 2px solid var(--color-white);
+      border-bottom: 2px solid var(--color-white);
+    }
+  }
+
+  &_next::before {
+    position: absolute;
+    right: 0;
+    border-top: 2px solid var(--color-mediumPurple);
+    border-right: 2px solid var(--color-mediumPurple);
+    -webkit-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+    -ms-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+    -o-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+    transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  }
+
+  &_next:disabled::before {
+    border-top: 2px solid var(--color-dustyGray);
+    border-right: 2px solid var(--color-dustyGray);
+  }
+
+  &_next:focus::before, &_next:hover::before, &_next:active::before {
+    border-top: 2px solid var(--color-white);
+    border-right: 2px solid var(--color-white);
+  }
+
+  &_next::before {
+    top: 50%;
+    left: 45%;
+  }
+}
+/***Стрелки слайдеров***/
+
+
+@include desktop {/*1385px*/
+  .container {
+    padding: 0 36px;
+  }
+
+  /*Общие продуктовые карточки-1385px divan__list-catalog__list-color-product__swiper-wraper*/
+  .product-item {
+    padding-bottom: 129px;
+  }
+
+  .product-block {
+    margin-bottom: 22px;
+  }
+
+  .product-button{
+    margin-top: 20px;
+  }
+  /* // Общие продуктовые карточки-1385px divan__list-catalog__list-color-product__swiper-wraper*/
+}
+
+@include tablet {/*999px*/
+  .container {
+    padding: 0 71px;
+  } 
+
+  .product-asterisk svg {
+    margin-right: 8px;
+  }
+
+  .product-block {
+    margin-bottom: 23px;
+  } 
+
+  .modal-wrap {
+    max-width: 81%; 
+  }
+}
+
+@include mini-tablet {/*747px*/
+  .container {
+    padding: 0 36px;
+  }
+}
+
+@include mobile {/*580px*/
+  .container {
+    padding: 0 13px;
+  }
+
+  /*Общие продуктовые карточки-580px divan__list-catalog__list-color-product__swiper-wraper*/
+  .product-item {
+    padding: 48px 4px 89px 15px;
+  }
+
+  .product-asterisk {
+    top: 14.3px;
+    left: 13.7px;
+    font-size: 13px;
+  
+    & svg {
+      margin-right: 4px;
+      margin-top: 3px;
+    }
+  }
+
+  .product-info {
+    padding: 21px 11px 0 0;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .product-block {
+    margin-bottom: 14px;
+  }
+
+  .product-text-link {
+    font-size: 16px;
+  } 
+
+  .product-block-span {
+    bottom: 17px;
+  } 
+
+  .product-btn {
+    margin-top: 15px;
+    padding: 10px 24px;
+  }
+  /*Общие продуктовые карточки-580px divan__list-catalog__list-color-product__swiper-wraper*/
+
+  
+  /*modal Диваны 580px*/
+  .modal-wrap {
+    margin: 40px auto;
+    max-width: 93%;
+  }
+
+  .modal-container {
+    padding-top: 32px;
+  } 
+
+  .modal-close {
+    top: 8px;
+    right: 8.3px;
+    font-size: 18px;
+  }
+
+  .modal-slonik-sps {
+    flex-basis: inherit;
+    padding: 63px 30px; 
+  
+    & .modal-close {
+      top: 12px;
+      right: 8px;
+    }
+  }  
+  /* // modal Диваны 580px*/
+}
+
+@include mini-mobile {/*480px*/
+}

@@ -1,0 +1,23 @@
+// базовые подключения
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize(); 
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "setings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/offer";
+@import "./components/divan";
+@import "./components/banner";
+@import "./components/top";
+@import "./components/useful";
+@import "./components/main-form";
+@import "./components/links";
+@import "./components/d-31";
+@import "./components/product";
+@import "./components/catalog";
+@import "./components/partnership";
+@import "./components/footer";

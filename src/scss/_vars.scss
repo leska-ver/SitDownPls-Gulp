@@ -1,0 +1,26 @@
+// если вы хотите использовать sass-переменные - удалите root
+
+:root {
+  --color-white: #fff;
+  --color-mineShaft: #333;/*Макета цвет black*/
+  --color-purpleHeart: #7033ac;/*primary_shade*/
+  --color-mediumPurple: #a65cf0;/*primary*/
+  --color-mauve: #c998fb;/*primary_light*/
+  --color-blueChalk: #ebd1ff;/*pink_violet*/
+  --color-magnolia: #f8efff;/*pink_light*/
+  --color-rust: #bb370e;/*secondary_shade*/
+  --color-crusta: #ff862f;/*secondary*/
+  --color-koromiko: #ffbd59;/*secondary_light*/
+  --color-milkPunch: #fff5d1;/*gold*/
+  --color-straw: #d5b986;/*bone*/
+  --color-wildSand: #f6f6f6;/*grey_light*/
+  --color-dustyGray: #999;/*grey_shade*/
+  --color-doveGray: #666;/*gray*/
+  --color-gallery: #eaeaea;/*green_input*/
+  --color-sulu: #b8ec64;/*line-color*/
+  --color-snowFlurry: #daffd1;
+  --color-linkWater: #f2f2fc;
+  --color-alabaster: #f7f7f7;
+  /*just-validate-error - цвет ошибки*/
+  --color-error: #FF6972;
+}

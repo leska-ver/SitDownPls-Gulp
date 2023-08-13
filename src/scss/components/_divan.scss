@@ -1,0 +1,297 @@
+@import "../mixins/_breakpoint.scss";
+
+/***Карточки дивана divan-1920***/
+.divan {
+  /*В обычном
+  padding: 35px 0 72px;*/
+  /*Здесь свой ПП для Gulp-a*/
+  padding: 38px 0 68px;
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 295px);
+    gap: 33px;
+    /*В обычном	
+    margin-bottom: 29px;*/
+    /*Здесь свой ПП для Gulp-a*/
+    margin-bottom: 34px;
+  }
+
+  &__item:first-child {
+    padding-top: 110px; 
+  }
+
+  &__item:nth-child(4) {
+    padding-top: 65px; 
+  }
+
+  &__item:nth-child(n+5) {
+    padding-top: 73.5px; 
+  }
+
+  &__item:nth-child(7) {
+    padding-top: 61px; 
+  }
+
+  &__item:nth-child(8) {
+    padding-top: 67px; 
+  }
+
+  &__item:nth-child(8) img {
+    margin-left: 28px;
+  }
+
+  &__item:nth-child(10) &__block-span {
+    margin-top: 16px; 
+  }
+
+  &__item:nth-child(11) &__block-span {
+    margin-top: 13px; 
+  }
+
+  &__item:nth-child(12) &__info {
+    padding-top: 45px; 
+  }
+
+  /*Ещё(Смотреть больше товаров) button-1920px*/
+  &__item_js {
+    -webkit-transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+    -o-transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+    transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+  }
+  /* // Ещё(Смотреть больше товаров) button-1920px*/
+
+  &__asterisk {
+    /* Здесь свой ПП, остальное в .product-asterisk*/
+    top: 33px; 
+  }
+
+  &__info {
+  /* Здесь свой ПП для Gulpa*/
+    padding-top: 15px;
+  }
+
+  &__span {
+    font-size: 18px;
+    line-height: 23.4px;
+
+    &_crusta {
+      color: var(--color-crusta);
+    }
+
+    &_dustyGray {
+      font-size: 16px;
+      color: var(--color-dustyGray);
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 32px;
+    border: 2px solid transparent;
+    font-weight: 700;
+    font-size: 16.5px;
+    color: var(--color-white);
+    background-color: var(--color-mediumPurple);
+    transition: all .4s ease-in-out;
+
+    &:focus {
+      background-color: var(--color-mauve);
+      border: 2px solid var(--color-mediumPurple);
+      outline: none;
+    }
+
+    &:hover {
+      background-color: var(--color-mauve);  
+    }
+
+    &:active {
+      background-color: var(--color-purpleHeart);
+      
+    }
+
+    &:disabled {
+      background-color: var(--color-gallery);
+      color: var(--color-dustyGray);
+    }
+  }
+}  
+  /*** // Конец divan 1920px***/
+
+
+@include desktop {
+  /***Карточки дивана divan-1385px***/
+  .divan {
+    padding: 36px 0 71px;
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 31px 33px;
+      /*В обычном
+      margin-bottom: 32px;*/
+      /*В Gulp-e*/
+      margin-bottom: 36px;
+    }
+    
+    &__item:nth-child(9) &__info {
+      padding-top: 11px;
+    }
+
+    /*Ещё(Смотреть больше товаров) button-1385px*/
+    &__item:nth-child(n+7) {
+      display: none;
+    }
+
+    &__item:nth-child(-n+6) {
+      display: inline-flex;
+    }
+    /* // Ещё(Смотреть больше товаров) button-1385*/
+
+    &__info {
+    /* Здесь свой ПП для Gulpa*/
+      padding-top: 16px;
+    }
+  }  
+}  
+/*** // Карточки дивана divan-1385px***/
+
+@mixin mini-desktop {
+  /***Карточки дивана divan-1068px***/
+
+}
+
+@include tablet {
+  /***Карточки дивана divan-999px***/
+  .divan {
+    padding: 38px 0 72px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      /*В обычном
+      margin-bottom: 26px;*/	
+      /* Здесь свой ПП для Gulpa*/
+      margin-bottom: 33px;
+      gap: 32px 33px;
+    }
+
+    &__item:nth-child(6) &__info {
+      /*В обычном*
+      padding-top: 16px;/
+      /* Здесь свой ПП для Gulpa*/
+      padding-top: 10px;
+    }
+
+    &__item:nth-child(n+3) &__block-span {
+      /*В обычном*/
+      bottom: 34px;
+    }
+  }  
+  /*** // Карточки дивана divan-999px***/
+}
+
+@include mini-tablet {
+  /***Карточки дивана divan-747px***/
+  
+}
+
+@include mobile {
+  /***Карточки дивана divan-580***/
+  .divan {
+    padding: 58px 0 69px;
+
+    &__title {
+      margin-bottom: 22px;
+      font-size: 24px;
+    }
+
+    &__list {
+      grid-template-rows: auto;
+      gap: 13px 17px ;
+      margin-bottom: 29px;
+    }  
+
+    &__item {
+      padding-bottom: 96px; 
+    }
+
+    &__item:nth-child(n+2) &__info {
+      /*В обычном
+      padding-top: 18px;*/
+      /*В Галпе*/
+      padding-top: 16px;
+    }    
+
+    &__item:nth-child(-n+6) {
+      /*В Галпе*/
+      padding-top: 49px;
+    }
+
+    &__item:nth-child(4) {
+      padding-top: 43px;
+      padding-bottom: 16px;
+    }
+
+    &__item:nth-child(4) &__info {
+      padding-top: 11px;
+    }  
+
+    &__item:nth-child(n+5) {
+      padding-top: 44.5px;
+    }
+
+    &__item:nth-child(n+5) &__asterisk {
+      /*В Галпе*/
+      top: 15px;
+    }
+
+    &__item:nth-child(n+5) &__info {
+      /*В обычном
+      padding-top: 14px;*/
+      /*В Галпе*/
+      padding-top: 16px;
+    }
+
+    &__item:first-child {    
+      padding: 52px 4px 96px 15px;
+    } 
+    
+    &__item:first-child &__info {
+      /*Обычный
+      padding-top: 21px;*/
+      /*В Галпе*/
+      padding: 25px 11px 0 0;
+    }
+
+    &__block-span {
+      bottom: 19px; 
+    }
+
+    &__asterisk {
+      top: 13px;
+    }
+
+    &__btn {
+      padding: 20px 33px;
+      font-size: 16px;
+    }    
+
+    &__item:nth-child(n+3) &__block-span {
+      bottom: 18px;
+    }
+  }
+  /*** // Карточки дивана divan-580***/
+}
+
+@include mini-mobile {
+  /***Карточки дивана divan-480px***/
+  
+}

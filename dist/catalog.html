@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shorcut icon" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SitDownPls-catalog</title>
+  <!-- Для ценика-Range/полоса nouislider.min.css -->
+  <link rel="stylesheet" href="resources/nouislider.min.css">
+  <!-- <link rel="stylesheet" href="css/choices.min.css"> -->
+  <link rel="stylesheet" href="resources/choices.min.css">
+  <link rel="stylesheet" href="resources/swiper.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Теперь всё это в папке main.min.css-->
+  <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Для семантики если нет заголовка h1 в вёрстке. Ставим скрытый заголовок.-->
+    <h1 class="visually-hidden">Я для семантики</h1>
+    <header class="header">
+  <div class="header__fon320">
+    <div class="container header__container">
+      <a href="#" class="header__logo">
+        <!--Для компа-->
+        <img class="header__logo-img" src="img/logo.png" alt="Логотип SitDownPls">
+        <!--Для кодепен
+          <img class="header__logo-img" src="https://sun6-20.userapi.com/s/v1/if1/b57P6Zl3efepNIIxVjQxAvN7pWa8OLr4FCAw0HrrezAEIMth81yqQEjoCvK1kec-xrTrHdrM.jpg?size=50x50&quality=96&crop=0,0,1814,1814&ava=1" alt="Логотип SitDownPls"> -->
+      </a>
+    </div>
+  </div>
+  <div class="header__fon1920">
+    <div class="container header__container">
+      <div class="header__map-phone">
+        <div class="header__desc-city">
+          <p class="header__desrc desrc">Ваш регион</p>
+          <div class="header__city">
+            <select class="header__city-select" aria-label="Выбрать город">
+              <option value="Москва">Москва</option>
+              <option value="Казань">Казань</option>
+              <option value="Пермь">Пермь</option>
+              <option value="Уфа">Уфа</option>
+            </select>
+          </div>
+        </div>
+        <a href="tel:+7(495)885-45-47" class="header__linkPhone">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg> +7(495) 885-45-47
+        </a>
+      </div>
+      <ul class="header__list-about header__list-about_block1024">
+        <li class="header__item-about">
+          <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать о компании">О компании</a>
+        </li>
+        <li class="header__item-about">
+          <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать о гарантии и возврате">Гарантия и возврат</a>
+        </li>
+        <li class="header__item-about">
+          <a class="header__link-about" href="#"
+            aria-label="Нажмите чтобы узнать что мы предлагаем корпоративным клиентам">Корпоративным клиентам</a>
+        </li>
+        <li class="header__item-about">
+          <a class="header__link-about" href="#" aria-label="Нажмите чтобы посмотреть дизайн решения">Дизайн-решение</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__ulFon1024">
+    <div class="container header__container header__container999">
+      <ul class="header__list-about">
+        <li class="header__item-about">
+          <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать о компании">О компании</a>
+        </li>
+        <li class="header__item-about">
+          <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать о гарантии и возврате">Гарантия и возврат</a>
+        </li>
+        <li class="header__item-about">
+          <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать что мы предлагаем корпоративным клиентам">Корпоративным клиентам</a>
+        </li>
+        <li class="header__item-about">
+          <a class="header__link-about" href="#" aria-label="Нажмите чтобы посмотреть дизайн решения">Дизайн-решение</a>
+        </li>
+      </ul>
+      <div class="header__shop header__shop_1024">
+        <a href="#" class="header__shop-personal" aria-label="Личный кабинет">
+          <svg width="26" height="28">
+            <use xlink:href="img/sprite.svg#personal"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__shop-cart" aria-label="Корзина">
+          <svg width="41" height="28">
+            <use xlink:href="img/sprite.svg#shoppingCart"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container header__container header__container_top1024">
+    <a href="#" class="header__logo header__logo_320">
+      <!--Для компа-->
+      <img class="header__logo-img" src="img/logo.png" alt="Логотип SitDownPls">
+      <!--Для кодепен
+        <img class="header__logo-img" src="https://sun6-20.userapi.com/s/v1/if1/b57P6Zl3efepNIIxVjQxAvN7pWa8OLr4FCAw0HrrezAEIMth81yqQEjoCvK1kec-xrTrHdrM.jpg?size=50x50&quality=96&crop=0,0,1814,1814&ava=1" alt="Логотип SitDownPls"> -->
+    </a>
+    <!-- header__block-burger нужен ради фона на всю ширину-->
+    <div class="header__block-burger">
+      <button id="burger" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header__block-menu menu" id="menu">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="catalog.html" aria-label="Нажмите чтобы перейти в каталог">Каталог</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#" aria-label="Нажмите чтобы просмотреть список наших магазинов">Магазины</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#" aria-label="Нажмите чтобы войти в шоу рум">Шоу-рум</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#" aria-label="Нажмите чтобы узнать о доставке и оплате">Доставка и оплата</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#" aria-label="Нажмите чтобы узнать о дисконте">Дисконт</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#" aria-label="Нажмите чтобы узнать наши контакты">Контакты</a>
+            </li>
+          </ul>
+          <ul class="container header__list-about-2">
+            <li class="header__item-about">
+              <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать о компании">О компании</a>
+            </li>
+            <li class="header__item-about">
+              <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать о гарантии и возврате">Гарантия и возврат</a>
+            </li>
+            <li class="header__item-about">
+              <a class="header__link-about" href="#" aria-label="Нажмите чтобы узнать что мы предлагаем корпоративным клиентам">Корпоративным клиентам</a>
+            </li>
+            <li class="header__item-about">
+              <a class="header__link-about" href="#" aria-label="Нажмите чтобы посмотреть дизайн решения">Дизайн-решение</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__elephant-svg"></div>
+      </div>
+    </div>
+    <div class="header__shop header__shop_999">
+      <a href="#" class="header__shop-personal" aria-label="Личный кабинет">
+        <svg width="26" height="28">
+          <use xlink:href="img/sprite.svg#personal"></use>
+        </svg>
+      </a>
+      <a href="#" class="header__shop-cart" aria-label="Корзина">
+        <svg width="41" height="28">
+          <use xlink:href="img/sprite.svg#shoppingCart"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="container header__container">
+    <form class="header__form" action="/search/">
+      <div class="header__search-relative">
+        <div class="header__search-loupe">
+          <svg width="20" height="20">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </div>
+        <input class="header__input" type="search" name="text" placeholder="Я хочу купить..." minlength="2" maxlength="20" required>
+        <button class="header__search-arrow" type="submit" aria-label="Поиск">
+          <svg width="32" height="32">
+            <use xlink:href="img/sprite.svg#arrow-catalog"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Дропдаун - Категория -->
+      <select class="header__сategories-select" id="choices" aria-label="Выбрать мебель">
+        <option value="">Категория</option>
+        <option>Диваны</option>
+        <option>Кресла</option>
+        <option>Пуфы</option>
+        <option>Кровати</option>
+        <option>Тумбы</option>
+        <option>Комоды</option>
+        <option>Стулья</option>
+        <option>Столы</option>
+        <option>Аксессуары</option>
+      </select>
+    </form>
+    <div class="header__shop header__shop_1920">
+      <a href="#" class="header__shop-personal" aria-label="Личный кабинет">
+        <svg width="26" height="28">
+          <use xlink:href="img/sprite.svg#personal"></use>
+        </svg>
+      </a>
+      <a href="#" class="header__shop-cart" aria-label="Корзина">
+        <svg width="41" height="28">
+          <use xlink:href="img/sprite.svg#shoppingCart"></use>
+        </svg>
+      </a>
+    </div>
+  </div><!--header__container-->
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+      <div class="links">
+  <div class="container links__container">
+    <h2 class="visually-hidden">Я для семантики</h2>
+    <ul class="links__list">
+      <li class="links__item">
+        <a class="links__link" href="index.html" aria-label="Ссылка на гавную страницу">Главная</a>
+      </li>
+      <li class="links__item">
+        <a class="links__link" href="catalog.html" aria-label="Ссылка на каталог">Каталог</a>
+      </li>
+      <li class="links__item">
+        <a class="links__link" href="#" aria-label="Ссылка на диваны">Диваны</a>
+      </li>
+      <li class="links__item">
+        <a class="links__link active-link" href="#"  aria-label="Ссылка на прямые диваны">Прямые диваны</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<section class="catalog">
+  <div class="container catalog__container">  
+    <div class="catalog__left">
+      <h3 class="catalog__title-h3 h3">Фильтровать по:</h3>
+      <div class="catalog__labels">
+        <form class="catalog__form" id="catalog__form_js1" action="#" aria-label="Выберите категорию мебели">
+          <h4 class="catalog__title-h4 h4">Категория</h4>
+          <label class="catalog__label catalog__label_furniture" data-filter="divans" for="divans">
+            <input class="catalog__input furniture-sofas-js" id="divans" type="checkbox" name="диваны" aria-label="диваны" checked="checked">
+            <span>Диваны</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="armchairs" for="armchairs">
+            <input class="catalog__input furniture-armchair-js" id="armchairs" type="checkbox" name="кресла" aria-label="Кресла">
+            <span>Кресла</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="poufs" for="poufs">
+            <input class="catalog__input furniture-poufs-js" id="poufs" type="checkbox" name="пуфы" aria-label="Пуфы">
+            <span>Пуфы</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="beds" for="beds">
+            <input class="catalog__input furniture-beds-js" id="beds" type="checkbox" name="кровати" aria-label="Кровати">
+            <span>Кровати</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="pedestals" for="pedestals">
+            <input class="catalog__input furniture-pedestals-js" id="pedestals" type="checkbox" name="тумбы" aria-label="Тумбы">
+            <span>Тумбы</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="commodes" for="commodes">
+            <input class="catalog__input furniture-commode-js" id="commodes" type="checkbox" name="комоды" aria-label="Комоды">
+            <span>Комоды</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="chairs" for="chairs">
+            <input class="catalog__input furniture-chair-js" id="chairs" type="checkbox" name="стулья" aria-label="Стулья">
+            <span>Стулья</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="desks" for="desks">
+            <input class="catalog__input furniture-desk-js" id="desks" type="checkbox" name="столы" aria-label="Столы">
+            <span>Столы</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="accessories" for="accessories">
+            <input class="catalog__input furniture-accessories-js" id="accessories" type="checkbox" name="аксессуары" aria-label="Аксессуары">
+            <span>Аксессуары</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="shelfs" for="shelfs">
+            <input class="catalog__input furniture-shelfs-js" id="shelfs" type="checkbox" name="полки" aria-label="Полки">
+            <span>Полки</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="wardrobe" for="wardrobe">
+            <input class="catalog__input furniture-wardrobe-js" id="wardrobe" type="checkbox" name="шкаф" aria-label="Шкаф">
+            <span>Шкаф</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="kozetkas" for="kozetkas">
+            <input class="catalog__input furniture-kozetkas-js" id="kozetkas" type="checkbox" name="козетки" aria-label="Козетки">
+            <span>Козетки</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="cabrioles" for="cabrioles">
+            <input class="catalog__input furniture-cabrioles-js" id="cabrioles" type="checkbox" name="кабриолеты" aria-label="Кабриолеты">
+            <span>Кабриолеты</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="jardinieres" for="jardinieres">
+            <input class="catalog__input furniture-jardinieres-js" id="jardinieres" type="checkbox" name="жардиньерки" aria-label="Жардиньерки">
+            <span>Жардиньерки</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="geridons" for="geridons">
+            <input class="catalog__input furniture-geridons-js" id="geridons" type="checkbox" name="геридоны" aria-label="Геридоны">
+            <span>Геридоны</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="showcases" for="showcases">
+            <input class="catalog__input furniture-showcases-js" id="showcases" type="checkbox" name="витрины" aria-label="Витрины">
+            <span>Витрины</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="banquettes" for="banquettes">
+            <input class="catalog__input furniture-banquettes-js" id="banquettes" type="checkbox" name="банкетки" aria-label="Банкетки">
+            <span>Банкетки</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="entresols" for="entresols">
+            <input class="catalog__input furniture-entresols-js" id="entresols" type="checkbox" name="антресоли" aria-label="Антресоли">
+            <span>Антресоли</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="coupe" for="coupe">
+            <input class="catalog__input furniture-coupe-js" id="coupe" type="checkbox" name="купе" aria-label="Купе">
+            <span>Купе</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="couches" for="couches">
+            <input class="catalog__input furniture-couches-js" id="couches" type="checkbox" name="кушетки" aria-label="Кушетки">
+            <span>Кушетки</span>
+          </label>
+          <label class="catalog__label catalog__label_furniture" data-filter="mirrors" for="mirrors">
+            <input class="catalog__input furniture-mirrors-js" id="mirrors" type="checkbox" name="зеркала" aria-label="Зеркала">
+            <span>Зеркала</span>
+          </label>
+        </form>
+        <button class="catalog__btn catalog__btn_js1" aria-label="Нажмите чтобы посмотреть больше товаров">
+          <span class="catalog__span-js1" id="more2">+ ещё 12</span>
+        </button>
+      </div>
+      <div class="catalog__price">
+        <h4 class="catalog__title-h4 h4">Цена</h4>
+        <form class="catalog__form catalog__form-margin" action="#" aria-label="выберите цену">
+          <div class="catalog__labelprice">
+            <label>
+              <span>от</span>
+              <input class="catalog__price-input first-price" type="number" id="first-price" placeholder="0" min="0" max="225000" value="2000" aria-label="укажите цену">
+            </label>
+            <label>
+              <span>до</span>
+              <input class="catalog__price-input second-price" type="number" id="second-price" placeholder="250&nbsp;000" min="0" max="225000" value="150000" aria-label="укажите цену">
+            </label>
+          </div>
+          <div class="catalog__price-slide" id="range-slider"></div>
+        </form>
+      </div>
+      <div class="catalog__discount">
+        <form class="catalog__form" aria-label="Скидка">
+          <h4 class="catalog__title-h4 h4">Скидка</h4>   
+          <div class="catalog__form-radio">
+            <input class="catalog__input-discount catalog__more" id="discount-more" type="radio" name="discount" aria-label="Более 5 000">
+            <label class="catalog__label-discount" for="discount-more">Более 5 000</label>                  
+            <input class="catalog__input-discount catalog__less" id="discount-less" type="radio" name="discount" aria-label="Менее 5 000">
+            <label class="catalog__label-discount" for="discount-less">Менее 5 000</label>                  
+            <input class="catalog__input-discount catalog__nodiscount" id="not-important" type="radio" name="discount" aria-label="Не важно" checked>
+            <label class="catalog__label-discount" for="not-important">Не важно</label> 
+          </div>
+        </form>                
+      </div>
+      <div class="catalog__colour">
+        <h4 class="catalog__title-h4 h4">Цвет</h4>
+        <form class="catalog__form" id="catalog__form_js2" action="#" aria-label="Выберите цвет">                  
+          <label class="catalog__label catalog__label_color" data-filter="fi-brown" for="brown">
+            <input class="catalog__input color-brown-js" id="brown" type="checkbox" name="коричневый" aria-label="Коричневый цвет">
+            <span>Коричневый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-black" for="black">
+            <input class="catalog__input color-black-js" id="black" type="checkbox" name="чёрный" aria-label="Чёрный цвет">
+            <span>Чёрный</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-beige" for="beige">
+            <input class="catalog__input color-beige-js" data-filter="game" id="beige" type="checkbox" name="бежевый" aria-label="Бежевый цвет">
+            <span>Бежевый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-gray" for="gray">
+            <input class="catalog__input color-gray-js" id="gray" type="checkbox" name="серый" aria-label="Серый цвет">
+            <span>Серый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-white" for="white">
+            <input class="catalog__input color-white-js" id="white" type="checkbox" name="белый" aria-label="Белый цвет">
+            <span>Белый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-blue" for="blue">
+            <input class="catalog__input color-blue-js" id="blue" type="checkbox" name="синий" aria-label="Синий цвет">
+            <span>Синий</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-orange" for="orange">
+            <input class="catalog__input color-orange-js" id="orange" type="checkbox" name="оранжевый" aria-label="Оранжевый цвет" checked="checked">
+            <span>Оранжевый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-yellow" for="yellow">
+            <input class="catalog__input color-yellow-js" id="yellow" type="checkbox" name="жёлтый" aria-label="Жёлтый цвет">
+            <span>Жёлтый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-green" for="green">
+            <input class="catalog__input color-green-js" id="green" type="checkbox" name="зелёный" aria-label="Зелёный цвет">
+            <span>Зелёный</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-pink" for="pink">
+            <input class="catalog__input color-pink-js" id="pink" type="checkbox" name="розовый" aria-label="Розовый цвет">
+            <span>Розовый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-purple" for="purple">
+            <input class="catalog__input color-purple-js" id="purple" type="checkbox" name="фиолетовый" aria-label="Фиолетовый цвет">
+            <span>Фиолетовый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-lilac" for="lilac">
+            <input class="catalog__input color-lilac-js" id="lilac" type="checkbox" name="сиреневый" aria-label="Сиреневый цвет">
+            <span>Сиреневый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-azure" for="azure">
+            <input class="catalog__input color-azure-js" id="azure" type="checkbox" name="лазурный" aria-label="Лазурный цвет">
+            <span>Лазурный</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-garnet" for="garnet">
+            <input class="catalog__input color-garnet-js" id="garnet" type="checkbox" name="гранатовый" aria-label="Гранатовый цвет">
+            <span>Гранатовый</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-emerald" for="red">
+            <input class="catalog__input color-red-js" id="red" type="checkbox" name="красный" aria-label="красный">
+            <span>Красный</span>
+          </label>
+          <label class="catalog__label catalog__label_color" data-filter="fi-cream" for="cream">
+            <input class="catalog__input color-cream-js" id="cream" type="checkbox" name="кремовый" aria-label="Кремовый цвет">
+            <span>Кремовый</span>
+          </label>                  
+        </form>
+        <button class="catalog__btn catalog__btn_js2" aria-label="Нажмите чтобы посмотреть больше товаров">
+          <span class="catalog__span-js2" id="more3">+ ещё 7</span>
+        </button>
+      </div>
+      <article class="catalog__baner-article">
+        <img src="img/banner-catalog1920.jpg" alt="Банер диван">
+        <!-- Для кодепена 
+        <img src="https://kupit-textil.ru/images/stories/virtuemart/product/na-divan-bez-podlakotnikov-temno-seriy.jpg" alt="image">-->
+        <div class="catalog__baner-info">
+          <h3 class="catalog__baner-title h3">
+            Оксфорд 1950                    
+          </h3>
+          <p class="catalog__baner-desrc">
+            Новая коллекция изысканных кресел
+          </p>
+          <a href="" class="catalog__baner-link">
+            В каталог                                       
+          </a>
+        </div>
+      </article>
+    </div><!--catalog__left-->
+    <div class="catalog__right">
+      <h2 class="catalog__title-h2 h2">Каталог</h2>
+      <div class="catalog__tags">
+        <div class="catalog__tag tag-furnitures furnitures-sofas sofas-active">
+          <span>Диваны</span>
+          <button class="catalog__tag-btn sofas-btn" aria-label="закрыть тег диваны">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-armchair">
+          <span>Кресла</span>
+          <button class="catalog__tag-btn armchair-btn" aria-label="закрыть тег кресла">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-poufs">
+          <span>Пуфы</span>
+          <button class="catalog__tag-btn poufs-btn" aria-label="закрыть тег пуфы">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-beds">
+          <span>Кровати</span>
+          <button class="catalog__tag-btn beds-btn" aria-label="закрыть тег кровати">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-pedestals">
+          <span>Тумбы</span>
+          <button class="catalog__tag-btn pedestals-btn" aria-label="закрыть тег тумбы">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-commode">
+          <span>Комоды</span>
+          <button class="catalog__tag-btn commode-btn" aria-label="закрыть тег комоды">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-chair">
+          <span>Стулья</span>
+          <button class="catalog__tag-btn chairs-btn" aria-label="закрыть тег стулья">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-desk">
+          <span>Столы</span>
+          <button class="catalog__tag-btn desk-btn" aria-label="закрыть тег столы">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-accessories">
+          <span>Аксессуары</span>
+          <button class="catalog__tag-btn accessories-btn" aria-label="закрыть тег аксессуары">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-shelfs">
+          <span>Полки</span>
+          <button class="catalog__tag-btn shelfs-btn" aria-label="закрыть тег полки">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-wardrobe">
+          <span>Шкаф</span>
+          <button class="catalog__tag-btn wardrobe-btn" aria-label="закрыть тег шкаф">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-kozetkas">
+          <span>Козетки</span>
+          <button class="catalog__tag-btn kozetkas-btn" aria-label="закрыть тег козетки">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-cabrioles">
+          <span>Кабриолеты</span>
+          <button class="catalog__tag-btn cabrioles-btn" aria-label="закрыть тег кабриолеты">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-jardinieres">
+          <span>Жардиньерки</span>
+          <button class="catalog__tag-btn jardinieres-btn" aria-label="закрыть тег жардиньерки">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-geridons">
+          <span>Геридоны</span>
+          <button class="catalog__tag-btn geridons-btn" aria-label="закрыть тег геридоны">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-showcases">
+          <span>Витрины</span>
+          <button class="catalog__tag-btn showcases-btn" aria-label="закрыть тег витрины">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-banquettes">
+          <span>Банкетки</span>
+          <button class="catalog__tag-btn banquettes-btn" aria-label="закрыть тег банкетки">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-entresols">
+          <span>Антресоли</span>
+          <button class="catalog__tag-btn entresols-btn" aria-label="закрыть тег антресоли">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-coupe">
+          <span>Купе</span>
+          <button class="catalog__tag-btn coupe-btn" aria-label="закрыть тег купе">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-couches">
+          <span>Кушетки</span>
+          <button class="catalog__tag-btn couches-btn" aria-label="закрыть тег кушетки">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-furnitures furnitures-mirrors">
+          <span>Зеркала</span>
+          <button class="catalog__tag-btn mirrors-btn" aria-label="закрыть тег зеркала">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-price price-active" id="price-wrap">
+          <span class="catalog__prc" id="prc">До 150 000</span>
+          <button class="catalog__tag-btn price-btn prc-btn" aria-label="закрыть тег цены">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-discount discount-more morediscount">
+          <span>Скидка более 5 000</span>
+          <button class="catalog__tag-btn more-btn morediscount-btn" aria-label="закрыть тег Скидка более 5 000">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-discount discount-less lessdiscount">
+          <span>Скидка менее 5 000</span>
+          <button class="catalog__tag-btn less-btn lessdiscount-btn" aria-label="закрыть тег Скидка менее 5 000">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-discount discount-without nodiscount nodiscount-active">
+          <span>Без скидки</span>
+          <button class="catalog__tag-btn without-btn nodiscount-btn" aria-label="закрыть тег Без скидки">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-brown">
+          <span>Коричневый</span>
+          <button class="catalog__tag-btn brown-btn" aria-label="закрыть тег коричневый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-black">
+          <span>Чёрный</span>
+          <button class="catalog__tag-btn black-btn" aria-label="закрыть тег чёрный цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-beige">
+          <span>Бежевый</span>
+          <button class="catalog__tag-btn beige-btn" aria-label="закрыть тег бежевый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-gray">
+          <span>Серый</span>
+          <button class="catalog__tag-btn gray-btn" aria-label="закрыть тег серый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-white">
+          <span>Белый</span>
+          <button class="catalog__tag-btn white-btn" aria-label="закрыть тег белый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-blue">
+          <span>Синий</span>
+          <button class="catalog__tag-btn blue-btn" aria-label="закрыть тег синий цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-orange orange-active">
+          <span>Оранжевый</span>
+          <button class="catalog__tag-btn orange-btn" aria-label="закрыть тег оранжевый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-yellow">
+          <span>Жёлтый</span>
+          <button class="catalog__tag-btn yellow-btn" aria-label="закрыть тег жёлтый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-green">
+          <span>Зелёный</span>
+          <button class="catalog__tag-btn green-btn" aria-label="закрыть тег зелёный цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-pink">
+          <span>Розовый</span>
+          <button class="catalog__tag-btn pink-btn" aria-label="закрыть тег розовый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-purple">
+          <span>Фиолетовый</span>
+          <button class="catalog__tag-btn purple-btn" aria-label="закрыть тег фиолетовый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-lilac">
+          <span>Сиреневый</span>
+          <button class="catalog__tag-btn lilac-btn" aria-label="закрыть тег сиреневый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-azure">
+          <span>Лазурный</span>
+          <button class="catalog__tag-btn azure-btn" aria-label="закрыть тег лазурный цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-garnet">
+          <span>Гранатовый</span>
+          <button class="catalog__tag-btn garnet-btn" aria-label="закрыть тег гранатовый цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-red">
+          <span>Красный</span>
+          <button class="catalog__tag-btn red-btn" aria-label="закрыть тег красный цвет">
+            x
+          </button>
+        </div>
+        <div class="catalog__tag tag-color color-cream">
+          <span>Кремовый</span>
+          <button class="catalog__tag-btn cream-btn" aria-label="закрыть тег кремовый цвет">
+            x
+          </button>
+        </div>
+      </div>
+      <ul class="catalog__dropfilter dropfilter">
+        <li class="dropfilter__item">
+          <h3 class="dropfilter__heading catalog__title-h3 h3">Фильтры:</h3>
+        </li>
+        <li class="dropfilter__item">
+          <button class="dropfilter__btn" data-path="filter" data-pathf="filterbtn" data-targetf="filterbtn" aria-label="нажмите чтобы открыть список категорий мебели">
+            <span class="dropfilter__title">Категория</span>
+          </button>
+          <div class="dropfilter__content" data-target="filter">
+            <form class="catalog__form" id="catalog__form_js1ad" action="#">
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="divans" for="divansAdaptiv">
+                <input class="catalog__input furniture-sofas-js" type="checkbox" id="divansAdaptiv" name="диваны" aria-label="диваны" checked="checked">
+                <span>Диваны</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="armchairs" for="armchairAdaptiv">
+                <input class="catalog__input furniture-armchair-js" type="checkbox" id="armchairAdaptiv" name="кресла" aria-label="кресла">
+                <span>Кресла</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="poufs" for="poufsAdaptiv">
+                <input class="catalog__input furniture-poufs-js" type="checkbox" id="poufsAdaptiv" name="пуфы" aria-label="пуфы">
+                <span>Пуфы</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="beds" for="bedsAdaptiv">
+                <input class="catalog__input furniture-beds-js" type="checkbox" id="bedsAdaptiv" name="кровати" aria-label="кровати">
+                <span>Кровати</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="pedestals" for="pedestalsAdaptiv">
+                <input class="catalog__input furniture-pedestals-js" type="checkbox" id="pedestalsAdaptiv" name="тумбы" aria-label="тумбы">
+                <span>Тумбы</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="commodes" for="commodeAdaptiv">
+                <input class="catalog__input furniture-commode-js" type="checkbox" id="commodeAdaptiv" name="комоды" aria-label="комоды">
+                <span>Комоды</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="chairs" for="chairsAdaptiv">
+                <input class="catalog__input furniture-chair-js" type="checkbox" id="chairsAdaptiv" name="стулья" aria-label="стулья">
+                <span>Стулья</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="desks" for="deskAdaptiv">
+                <input class="catalog__input furniture-desk-js" type="checkbox" id="deskAdaptiv" name="столы" aria-label="столы">
+                <span>Столы</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="accessories" for="accessoriesAdaptiv">
+                <input class="catalog__input furniture-accessories-js" type="checkbox" id="accessoriesAdaptiv" name="аксессуары" aria-label="аксессуары">
+                <span>Аксессуары</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="shelfs" for="shelfsAdaptiv">
+                <input class="catalog__input furniture-shelfs-js" type="checkbox" id="shelfsAdaptiv" name="полки" aria-label="полки">
+                <span>Полки</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="wardrobe" for="wardrobeAdaptiv">
+                <input class="catalog__input furniture-wardrobe-js" type="checkbox" id="wardrobeAdaptiv" name="угловые диваны" aria-label="шкаф">
+                <span>Шкаф</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="kozetkas" for="kozetkasAdaptiv">
+                <input class="catalog__input furniture-kozetkas-js" type="checkbox" id="kozetkasAdaptiv" name="козетки" aria-label="козетки">
+                <span>Козетки</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="cabrioles" for="cabriolesAdaptiv">
+                <input class="catalog__input furniture-cabrioles-js" type="checkbox" id="cabriolesAdaptiv" name="кабриолеты" aria-label="кабриолеты">
+                <span>Кабриолеты</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="jardinieres" for="jardinieresAdaptiv">
+                <input class="catalog__input furniture-jardinieres-js" type="checkbox" id="jardinieresAdaptiv" name="жардиньерки" aria-label="жардиньерки">
+                <span>Жардиньерки</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="geridons" for="geridonsAdaptiv">
+                <input class="catalog__input furniture-geridons-js" type="checkbox" id="geridonsAdaptiv" name="геридоны" aria-label="геридоны">
+                <span>Геридоны</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="showcases" for="showcasesAdaptiv">
+                <input class="catalog__input furniture-showcases-js" type="checkbox" id="showcasesAdaptiv" name="витрины" aria-label="витрины">
+                <span>Витрины</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="banquettes" for="banquettesAdaptiv">
+                <input class="catalog__input furniture-banquettes-js" type="checkbox" id="banquettesAdaptiv" name="банкетки" aria-label="банкетки">
+                <span>Банкетки</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="entresols" for="entresolsAdaptiv">
+                <input class="catalog__input furniture-entresols-js" type="checkbox" id="entresolsAdaptiv" name="антресоли" aria-label="антресоли">
+                <span>Антресоли</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="coupe" for="coupeAdaptiv">
+                <input class="catalog__input furniture-coupe-js" type="checkbox" id="coupeAdaptiv" name="купе" aria-label="купе">
+                <span>Купе</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="couches" for="couchesAdaptiv">
+                <input class="catalog__input furniture-couches-js" type="checkbox" id="couchesAdaptiv" name="кушетки" aria-label="кушетки">
+                <span>Кушетки</span>
+              </label>
+              <label class="catalog__label catalog__label_furniture furniture" data-filter="mirrors" for="mirrorsAdaptiv">
+                <input class="catalog__input furniture-mirrors-js" type="checkbox" id="mirrorsAdaptiv" name="зеркала" aria-label="зеркала">
+                <span>Зеркала</span>
+              </label>
+            </form>
+            <button class="catalog__btn catalog__btn_js1" aria-label="Нажмите чтобы посмотреть больше товаров">
+              <span class="catalog__span-js1" id="more2ad">+ ещё 12</span>
+            </button>
+          </div>
+        </li>
+        <li class="dropfilter__item">
+          <button class="dropfilter__btn" data-path="filter1" aria-label="нажмите чтобы открыть список цены">
+            <span class="dropfilter__title">Цена</span>
+          </button>
+          <div class="dropfilter__content" data-target="filter1">
+            <form class="catalog__form catalog__form-margin" action="#">
+              <div class="catalog__labelprice">
+                <label>
+                  <span>от</span>
+                  <input class="catalog__price-input first-price" type="number" id="first-priceAdaptiv" placeholder="0" min="0" max="225000" value="2000" aria-label="введите цену">
+                </label>
+                <label>
+                  <span>до</span>
+                  <input class="catalog__price-input second-price" type="number" id="second-priceAdaptiv" placeholder="250&nbsp;000" min="0" max="225000" value="150000" aria-label="введите цену">
+                </label>
+              </div>
+            </form>
+          </div>
+        </li>
+        <li class="dropfilter__item">
+          <button class="dropfilter__btn" data-path="filter2">
+            <span class="dropfilter__title">Скидка</span>
+          </button>
+          <div class="dropfilter__content" data-target="filter2">
+            <form class="catalog__form" action="#">
+              <div class="catalog__form-radio">
+                <input class="catalog__input-discount catalog__more" id="moreAdaptiv" type="radio" name="discount" aria-label="Более 5 000">
+                <label class="catalog__label-discount" for="moreAdaptiv">Более 5 000</label>                  
+                <input class="catalog__input-discount catalog__less" id="lessAdaptiv" type="radio" name="discount" aria-label="Менее 5 000">
+                <label class="catalog__label-discount" for="lessAdaptiv">Менее 5 000</label>                  
+                <input class="catalog__input-discount catalog__nodiscount" id="notMatterAdaptiv" type="radio" name="discount" aria-label="Не важно" checked="">
+                <label class="catalog__label-discount" for="notMatterAdaptiv">Не важно</label> 
+              </div>
+            </form>
+          </div>
+        </li>
+        <li class="dropfilter__item">
+          <button class="dropfilter__btn" data-path="filter3" aria-label="нажмите чтобы открыть список цветов">
+            <span class="dropfilter__title">Цвет</span>
+          </button>
+          <div class="dropfilter__content" data-target="filter3">
+            <form class="catalog__form" id="catalog__form_js2ad" action="#">
+              <label class="catalog__label catalog__label_color" data-filter="fi-brown" for="brownAdaptiv">
+                <input class="catalog__input color-brown-js" type="checkbox" id="brownAdaptiv" name="коричневый" aria-label="коричневый">
+                <span>Коричневый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-black" for="blackAdaptiv">
+                <input class="catalog__input color-black-js" type="checkbox" id="blackAdaptiv" name="черный" aria-label="чёрный">
+                <span>Черный</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-beige" for="beigeAdaptiv">
+                <input class="catalog__input color-beige-js" type="checkbox" id="beigeAdaptiv" name="бежевый" aria-label="бежевый">
+                <span>Бежевый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-gray" for="grayAdaptiv">
+                <input class="catalog__input color-gray-js" type="checkbox" id="grayAdaptiv" name="серый" aria-label="серый">
+                <span>Серый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-white" for="whiteAdaptiv">
+                <input class="catalog__input color-white-js" type="checkbox" id="whiteAdaptiv" name="белый" aria-label="белый">
+                <span>Белый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-blue" for="blueAdaptiv">
+                <input class="catalog__input color-blue-js" type="checkbox" id="blueAdaptiv" name="синий" aria-label="синий">
+                <span>Синий</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-orange" for="orangeAdaptiv">
+                <input class="catalog__input color-orange-js" type="checkbox" id="orangeAdaptiv" name="оранжевый" aria-label="оранжевый" checked="checked">
+                <span>Оранжевый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-yellow" for="yellowAdaptiv">
+                <input class="catalog__input color-yellow-js" type="checkbox" id="yellowAdaptiv" name="желтый" aria-label="жёлтый">
+                <span>Желтый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-green" for="greenAdaptiv">
+                <input class="catalog__input color-green-js" type="checkbox" id="greenAdaptiv" name="зеленый" aria-label="зелёный">
+                <span>Зеленый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-pink" for="pinkAdaptiv">
+                <input class="catalog__input color-pink-js" type="checkbox" id="pinkAdaptiv" name="розовый" aria-label="розовый">
+                <span>Розовый</span>
+              </label>                      
+              <label class="catalog__label catalog__label_color" data-filter="fi-purple" for="purpleAdaptiv">
+                <input class="catalog__input color-purple-js" type="checkbox" id="purpleAdaptiv" name="фиолетовый" aria-label="фиолетовый">
+                <span>Фиолетовый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-lilac" for="lilacAdaptiv">
+                <input class="catalog__input color-lilac-js" type="checkbox" id="lilacAdaptiv" name="сиреневый" aria-label="сиреневый">
+                <span>Сиреневый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-azure" for="azureAdaptiv">
+                <input class="catalog__input color-azure-js" type="checkbox" id="azureAdaptiv" name="лазурный" aria-label="лазурный">
+                <span>Лазурный</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-garnet" for="garnetAdaptiv">
+                <input class="catalog__input color-garnet-js" type="checkbox" id="garnetAdaptiv" name="гранатовый" aria-label="гранатовый">
+                <span>Гранатовый</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-emerald" for="redAdaptiv">
+                <input class="catalog__input color-red-js" type="checkbox" id="redAdaptiv" name="красный" aria-label="красный">
+                <span>Красный</span>
+              </label>
+              <label class="catalog__label catalog__label_color" data-filter="fi-cream" for="creamAdaptiv">
+                <input class="catalog__input color-cream-js" type="checkbox" id="creamAdaptiv" name="кремовый" aria-label="кремовый">
+                <span>Кремовый</span>
+              </label>
+            </form>
+            <button class="catalog__btn catalog__btn_js2ad" aria-label="Нажмите чтобы посмотреть больше товаров">
+              <span class="catalog__span-js2" id="more3ad">+ ещё 7</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div class="swiper catalog__swiper">              
+        <div class="swiper-container catalog__slides-container">
+          <ul class="swiper-wrapper catalog__list-color product-list">
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="divans, fi-black">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    5,0
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan1-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan1-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan1-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan1-1920.png" alt="Картина Диван кожаный">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://avatars.mds.yandex.net/get-mpic/5219306/img_id4554883736712988867.jpeg/9hq" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван кожаный">Диван кожаный
+                        <span>“R-94”</span>
+                      </a>
+                    </h4> 
+                  </div>
+                </div>
+                <div class="catalog__block-span product-block-span">
+                  <span class="catalog__span product-span">94 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                </div>    
+              </article>                                     
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="divans, fi-brown">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,9
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan2-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan2-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan2-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan2-1920.png" alt="Картина Диван апартековый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://i.pinimg.com/736x/05/c7/2a/05c72a79112b9b4de5c4993a922bf4d4.jpg" alt="Картина">Для codepen-->
+                </div>  
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван апартековый">Диван апартековый
+                        <span>“T-75”</span>
+                      </a>
+                    </h4>
+                  </div>
+                </div>
+                <div class="catalog__block-span product-block-span">
+                  <span class="catalog__span product-span">69 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>                          
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="divans, fi-blue">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,8
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan3-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan3-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan3-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan3-1920.png" alt="Картина Диван тканевый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://avatars.mds.yandex.net/i?id=cd804cc99d45c960837305d2a2c91c12-7045468-images-thumbs&n=13" alt="Картина">Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="d-31.html" aria-label="Ссылка на Диван тканевый">Диван тканевый
+                        <span>“D-31”</span>
+                      </a>
+                    </h4> 
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">28 490 руб</span>
+                    <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>                          
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="kozetkas, fi-orange">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,8
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan4-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan4-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan4-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan4-1920.png" alt="Картина Диван велюровый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://photo.mebelion.ru/images/c8a074c24d652e1eb8869fb9c9c56760.jpg" alt="Картина">Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван велюровый">Диван велюровый
+                        <span>“Y-68”</span>
+                      </a>
+                    </h4> 
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>                          
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="pedestals, fi-yellow">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,8
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan5-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan5-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan5-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan5-1920.png" alt="Картина Диван из шинила">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://img.inmyroom.ru/inmyroom/resize/1400x1400/jpg:85/uploads/photo/file/d5/d5d3/jpg_2000_d5d3c192-83c4-4451-9861-ff6e495b5882.jpg?sign=a288223d5091e746cd6e68badfb069aff115c7b8b68b0576244b232e1e5802b9" alt="Картина">Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван из шинила">Диван из шинила
+                        <span>“W-95”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="commodes, fi-beige">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,8
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan6-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan6-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan6-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan6-1920.png" alt="Картина Диван флоковый">
+                  </picture>
+                  <!--<img class="catalog__image offer-modal" src="https://d2xt62c7gwqga3.cloudfront.net/uploads/produit/5024/custom_5af9ec9451183.jpg" alt="Картина">Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван флоковый">Диван флоковый
+                        <span>“G-41”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">17 990 руб</span>
+                    <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="chairs, fi-gray">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,8
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan7-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan7-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan7-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan7-1920.png" alt="Картина Диван шиниловый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://www.slavstol.ru/images/pages/271/start.jpg" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван шиниловый">Диван шиниловый
+                        <span>“V-43”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">19 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="desks, fi-white">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,7
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan8-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan8-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan8-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan8-1920.png" alt="Картина Диван велюровый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://img.inmyroom.ru/inmyroom/resize/1400x1400/jpg:85/uploads/photo/file/7e/7ee5/jpg_2000_7ee50a60-1afd-47d1-9dd5-f6e64971a87b.jpg?sign=44b2fd20ef196c2961aaa4bf0a8357c0499d98d23b99acfc63d9681922e0d2fc" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван велюровый">Диван велюровый
+                        <span>“S-99”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">19 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="accessories, fi-green">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,7
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan9-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan9-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan9-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan9-1920.png" alt="Картина Диван из кожзама">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://photo.mebelion.ru/images/f27c59009cf0717ea8a7349405976f14.jpg" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван из кожзама">Диван из кожзама
+                        <span>“F-85”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">26 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="kozetkas, fi-gray">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,6
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan10-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan10-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan10-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan10-1920.png" alt="Картина Диван флоковый">
+                  </picture>
+                  <!--<img class="catalog__image offer-modal" src="https://tikomart.ru/uploads/2018/07/15305369126517.jpg" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван флоковый">Диван флоковый
+                        <span>“H-64”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="wardrobe, fi-blue">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,6
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan11-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan11-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan11-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan11-1920.png" alt="Картина Диван флоковый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://img.inmyroom.ru/inmyroom/resize/1400x1400/jpg:85/uploads/photo/file/2c/2c20/jpg_2000_2c202646-44c6-4536-bbda-089d29a83c81.jpg?sign=a630e2e406f2dc2b27230e8d29c10823f50bb9363f5b07b85ffc7d12c98f1507" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван флоковый">Диван флоковый
+                        <span>“H-58”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="kozetkas, fi-brown">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,6
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan12-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan12-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan12-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan12-1920.png" alt="Картина Диван из кожзама">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://img.inmyroom.ru/inmyroom/resize/1400x1400/jpg:85/uploads/photo/file/91/918c/jpg_2000_918c889c-56a2-4805-80fd-ee0596de200e.jpg?sign=999e2a1fe642450ba64964ec0eb8e91625cfc2d1282061c148bca8aacca91823" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван из кожзама">Диван флоковый
+                        <span>“R-43”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="kozetkas, fi-gray">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,6
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan2st1-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan2st1-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan2st1-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan2st1-1920.png" alt="Картина Диван из шинила">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://d2xt62c7gwqga3.cloudfront.net/uploads/produit/5024/custom_5af9ec9451183.jpg" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван из шинила">Диван из шинила
+                        <span>“С-42”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="jardinieres, fi-yellow">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,6
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan2st2-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan2st2-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan2st2-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan2st2-1920.png" alt="Картина Диван велюровый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://static.tildacdn.com/tild3938-3735-4666-a238-383034633563/3.jpg" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван велюровый">Диван велюровый
+                        <span>“U-58”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="geridons, fi-beige">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,5
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan2st3-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan2st3-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan2st3-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan2st3-1920.png" alt="Картина Диван флоковый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://www.ru-divan.ru/uploads/media/tissue/0001/32/e08ff6c928b114a79251da10a043ea142c5b51a9.jpeg" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста-->
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван флоковый">Диван велюровый
+                        <span>“F-41”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="showcases, fi-gray">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,5
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan2st4-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan2st4-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan2st4-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan2st4-1920.png" alt="Картина Диван велюровый">
+                  </picture>
+                  <!--<img class="catalog__image offer-modal" src="https://imodern.ru/upload/iblock/2d4/2d44bc8421d592a0235934524502750d.jpg" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван велюровый">Диван велюровый
+                        <span>“R-85”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="banquettes, fi-beige">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,5
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan2st5-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan2st5-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan2st5-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan2st5-1920.png" alt="Картина Диван велюровый">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://assets-a2.kompasiana.com/items/album/2015/09/19/welfare-55fd3d75169373ba0965e417.jpg?t=o&v=350" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван велюровый">Диван велюровый
+                        <span>“S-44”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide catalog__item-color product-item" data-filter-card="entresols, fi-yellow">
+              <article class="catalog__article product-article">
+                <div class="catalog__position product-position"><!--Блок не удалять-->
+                  <span class="catalog__asterisk product-asterisk">
+                    <svg width="16" height="15">
+                      <use xlink:href="img/sprite.svg#asterisk"></use>
+                    </svg>
+                    4,4
+                  </span>
+                  <!--Для компа-->
+                  <picture>
+                    <source srcset="./img/divan2st6-320.png" media="(max-width: 580px)">
+                    <source srcset="./img/divan2st6-768.png" media="(max-width: 999px)">
+                    <source srcset="./img/divan2st6-1024.png" media="(max-width: 1385px)">
+                    <img class="catalog__image" src="./img/divan2st6-1920.png" alt="Картина Диван из шинила">
+                  </picture>
+                  <!--<img class="catalog__image divan-modal" src="https://assets-a2.kompasiana.com/items/album/2015/09/19/welfare-55fd3d75169373ba0965e417.jpg?t=o&v=350" alt="Картина"> Для codepen-->
+                </div>
+                <div class="catalog__info product-info">
+                  <div class="catalog__block product-block"><!--<-Блок для выравнивание текста--> 
+                    <h4 class="catalog__h4 product-text">
+                      <a  class="catalog__h4-link product-text-link" href="#" aria-label="Ссылка на Диван из шинила">Диван из шинила
+                        <span>“С-80”</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="catalog__block-span product-block-span">
+                    <span class="catalog__span product-span">22 990 руб</span>
+                  <button class="catalog__button btn product-btn" aria-label="Нажмите чтобы купить">Купить</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>                  
+        </div>
+        <!--swiper-container-->
+        <div class="swiper-pagination catalog__pagination"></div>
+      </div>
+    </div>
+  </div><!-- catalog__container -->
+</section>
+    </main>
+    <footer class="footer">
+  <div class="footer__top">
+    <div class="container footer__container-top">
+      <div class="footer__log-resources">
+        <a class="footer__logo" href="#">
+          <img class="footer__logo-img" src="img/logo.png" alt="Логотип SitDownPls">
+        </a>
+        <nav class="footer__nav-icone">
+          <ul class="footer__list-icone">
+            <li class="footer__item-icone">
+              <a href="https://www.facebook.com/" class="footer__link-icone" target="blank" aria-label="facebook">
+                <svg width="38" height="38">
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item-icone">
+              <a href="https://vk.com/" class="footer__link-icone" target="blank" aria-label="ВКонтакт">
+                <svg width="38" height="38">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item-icone">
+              <a href="https://www.instagram.com/" class="footer__link-icone" target="blank" aria-label="instagram">
+                <svg width="38" height="38">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="footer__nav-navigation">
+        <ul class="footer__list-navigation">
+          <li class="footer__item-navigation">О нас</li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">О компании</a>
+          </li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Блог</a>
+          </li>
+        </ul>
+        <ul class="footer__list-navigation">
+          <li class="footer__item-navigation">Услуги</li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Доставка</a>
+          </li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Рассрочка и кредит</a>
+          </li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Сборка и установка</a>
+          </li>
+        </ul>
+        <ul class="footer__list-navigation">
+          <li class="footer__item-navigation">Связь с нами</li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Обратная связь</a>
+          </li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer__list-navigation">
+          <li class="footer__item-navigation">Сотрудничество</li>
+          <li class="footer__item-navigation">
+            <a href="partnership.html" aria-label="Ссылка на Поставщиков" class="footer__link-navigation">Поставщикам</a>
+          </li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Оптовикам</a>
+          </li>
+          <li class="footer__item-navigation">
+            <a href="#" class="footer__link-navigation">Карьера</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__container-bottom">
+      <span class="footer__bottom-text">SDP<sup class="footer__sup">&reg;</sup> 2011-2021</span>
+    </div>
+  </div>
+</footer>
+  </div>
+
+
+
+
+  <!--Аккордеон тоже самое и для бургера-->
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
+  <!--минифицированный библиотека-->
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
+  <!--минифицированный библиотека-->
+  <!--Селектор(Выбор)-->
+  <!--Для компа-->
+  <!-- <script src="js/choices.min.js"></script> в main.js -->
+  <!--Для кодепена <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script> -->
+
+  <!-- Мои В main.js поставили, а здесь не удалять-->
+  <!-- <script src="js/SitDownPls.js"></script>-->
+  <!-- <script src="js/catalog.js"></script> -->
+
+  <!--<svg>
+    <use xlink:href="img/sprite.svg#test"></use>
+  </svg> -->
+
+
+  
+  
+  <script defer src="resources/choices.min.js"></script>
+   <!--Аккордеон тоже самое и для бургера-->
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!--минифицированный библиотека-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <!--Слайдера - Swiper JS -->
+  <script defer src="resources/swiper.min.js"></script>
+  <script defer src="resources/nouislider.min.js"></script>
+
+  <!--мои-->
+  <script defer src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<section class="main-form">
+  <div class="container main-form__container">
+    <h2 class="main-form__title h2">
+      Мы всегда вам рады!
+    </h2>
+    <p class="main-form__desrc desrc">
+      Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
+      <button class="main-form__tooltip" aria-label="Кнопка с со скрытым текстом, текст кнопки: Реплицированные с зарубежных источников, исследования формируют глобальную сеть." aria-describedby="descriptionClose"><span>?</span></button>
+      <span class="main-form__span-text" role="tooltip" id="descriptionClose">
+        Реплицированные с зарубежных источников, исследования формируют глобальную сеть.
+      </span>
+    </p>
+    <form class="main-form__form main-form__form_js form-disabled" action="mail.php" method="POST" enctype="multipart/form-data" aria-label="Здесь вы можете заказать обратный звонок">
+      <input type="hidden" name="admin_email[]" value="darki@yandex.ru">
+      <input type="hidden" name="form_subject" value="Заявка с сайта SitDownPls-Gulp">
+      <!--data здесь он обрабатывает плагин валидатор кода-->
+      <label class="main-form__label" for="name">
+        <input class="main-form__input" type="text" placeholder="Как вас зовут?" data-validate-field="name" name="name" id="name" required aria-label="Введите ваше имя">
+      </label>
+      <label class="main-form__label" for="tel">
+        <input class="main-form__input" type="tel" placeholder="Ваш телефон" data-validate-field="tel" data-validate-rules="phone" name="tel" id="tel" aria-label="Введите ваш телефон">
+      </label>
+      <label class="main-form__label" for="email">
+        <input class="main-form__input" type="email" placeholder="Ваш email" data-validate-field="email" name="email" id="email" aria-label="Введите вашу почту">
+      </label>
+      <button class="main-form__btn btn main-form__btn_jsDis main-form__btn_filled" aria-label="Нажмите чтобы отправить">
+        Отправить
+      </button>
+      <div class="main-form__checkbox-container">
+        <input class="main-form__input-checkbox input-checkbox click-checkbox-js checkbox-js checkbox-disabled" id="checkbox" type="checkbox" checked="checked" aria-label="Нажмите если принимаете пользовательское соглашение" required="" data-validate-field="checkbox">
+        <label class="main-form__label main-form__label-checkbox" for="checkbox">
+          Принимаю
+        </label>
+        <a class="main-form__link modalBtn-js" href="#" data-modal-trigger="trigger-3" aria-label="Нажмите чтобы прочитать пользовательское соглашение">пользовательское соглашение</a>
+      </div>
+    </form>
+    <div class="main-form__modal modal" data-modal="trigger-3">
+      <div class="main-form__block"><!--__block для высоты.simplebar-content-->
+        <div class="main-form__modal-wrap-pol modal-wrap">
+          <div class="main-form__modal-container-pol modal-container" data-simplebar>
+            <button class="main-form__modal-close modal-close" title="Закрыть">&#10006;</button>
+            <h2 class="main-form__modal-h2 h2">
+              ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
+            </h2>
+            <p>1. Основные понятия.</p>
+            <p>1.1. Интернет-магазин — интернет-сайт, расположенный по адресу: <del>(ссылка)</del> на котором
+              представлены Товары, предлагаемые Продавцом для приобретения и все связанные с ним поддомены;</p>
+            <p>1.2. Посетитель Интернет-магазина — лицо, пришедшее на сайт Интернет-магазина без цели размещения
+              Заказа;
+            </p>
+            <p>2. Общие положения.</p>
+            <p>2.1. Продавец осуществляет продажу Товаров через Интернет-магазин.</p>
+            <p>2.2. Заказывая Товары через Интернет-магазин, Пользователь соглашается с условиями, изложенными ниже. В случае несогласия с условиями, изложенными в настоящем Пользовательском соглашении (далее — Соглашение или Публичная оферта) Пользователь обязан немедленно прекратить использование сервиса и покинуть Интернет-магазин.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-form__slonik modal-slonik main-form__slonik_js">
+      <div class="main-form__slonik-sps modal-slonik-sps main-form__slonik-sps_js">
+        <button class="main-form__modal-close modal-close main-form__modal-close_js" title="Закрыть">
+          &#10006;
+        </button>
+        <div class="main-form__elephant-png"></div>
+        <h2 class="main-form__modal-h2 main-form__modal-h2_elephant320 h2">
+          Спасибо, мы вам перезвоним!
+        </h2>
+      </div>
+    </div><!--d-31__top-slonik-->          
+  </div>
+</section>
