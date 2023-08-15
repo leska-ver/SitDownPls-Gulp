@@ -1,4 +1,4 @@
-
+- PHPMailer – не пихай мне ФАШИСТОВ. Я с РОССИЕЙ!!! :-)
 
 ![PHPMailer](https://raw.github.com/PHPMailer/PHPMailer/master/examples/images/phpmailer.png)
 
